@@ -219,7 +219,9 @@ function dec(index) {
 }
 
 
-
+document.getElementById("placeOrder").addEventListener("click", function () {
+    window.location.href = "paymentbycard.html"
+})
 
 
 
