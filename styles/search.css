@@ -68,7 +68,7 @@ body {
   border: 1px solid black;
   padding: 38px 0;
   margin: 25px 10px 0 10px;
-  background-image: url("foodimg.png");
+  background-image: url("../images/fresh.png");
   background-repeat: no-repeat;
   background-position: cover;
   border-radius: 5px;
@@ -166,7 +166,7 @@ body {
 .sideCartMain h2,
 p {
   padding: 6px 10px 0 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sideCartDiv {
@@ -222,11 +222,21 @@ p {
   padding: 14px 80px;
   margin: 4px 20px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   background-image: linear-gradient(to right, #f5914e, #e85826);
   color: #fff;
   border-radius: 50px;
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+.delivery p {
+  font-size: 16px;
+  color: green;
+  border: 1px solid green;
+  background-color: lightgreen;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px;
 }
