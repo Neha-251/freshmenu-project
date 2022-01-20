@@ -64,7 +64,7 @@ function appendData(meals) {
         let div2 = document.createElement("div");
 
         let price = document.createElement("p");
-        price.innerHTML = "₹ 250";
+        price.innerHTML = "₹ 249";
         let btn = document.createElement("button");
         btn.setAttribute("id", "cartBtn");
         btn.addEventListener("click", function () {
@@ -87,9 +87,15 @@ function deBounce() {
         if (food_waiting) {
             clearTimeout(food_waiting);
         }
+
+
         food_waiting = setTimeout(function () {
             foodSearch();
+            alsolike();
+
         }, 2000);
+
+
         document.querySelector(".searchFoodResults").style.display = "block";
         document.querySelector(".topCata").style.display = "none";
     } else {
@@ -112,7 +118,7 @@ function sideCart({ strMeal, strMealThumb, price }) {
     let cartData = {
         strMeal,
         strMealThumb,
-        price: 250
+        price: 249
     }
     cart.push(cartData)
     localStorage.setItem("CartData", JSON.stringify(cart));
@@ -189,25 +195,6 @@ function cartTotal() {
 
 
 
-// let counterDisplayElem = document.querySelector('#count');
-// let counterMinusElem = document.querySelector('#dec');
-// let counterPlusElem = document.querySelector('#inc');
-
-// let counter = 1;
-
-
-// counterPlusElem.addEventListener("click", () => {
-//     counter++;
-//     counterDisplayElem.innerHTML = counter;
-// });
-
-// counterMinusElem.addEventListener("click", () => {
-//     counter--;
-//     counterDisplayElem.innerHTML = counter;
-// });
-
-
-
 
 function dec(index) {
 
@@ -225,12 +212,66 @@ document.getElementById("placeOrder").addEventListener("click", function () {
 
 
 
-// const successCallback = (position) => {
 
-//     console.log(position);
-// }
-// const errorCallback = (error) => {
+// ---alsolike----
 
-//     console.error(error);
-// }
-// navigator.geolocation.getcurrentPosition(successCallback, errorCallback);
+async function alsolike() {
+    try {
+
+        searchBox = document.querySelector("#searchBox").value;
+
+        let res = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+        );
+        let data = await res.json();
+        let meal = data.meals;
+        appendLike(meal)
+        console.log("also", meal);
+    } catch (err) {
+        console.log("er:", err);
+    }
+}
+
+function appendLike(meals) {
+
+    let also = document.querySelector(".alsolike");
+    also.innerHTML = "";
+    if (meals == undefined) {
+        return false;
+    }
+
+    meals.forEach(({ strMeal, strMealThumb }) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "likeDiv")
+
+        let img = document.createElement("img");
+        img.src = strMealThumb;
+        let p = document.createElement("p");
+        p.innerText = strMeal;
+
+        let div2 = document.createElement("div");
+
+        let price = document.createElement("p");
+        price.innerHTML = "₹ 249";
+        let btn = document.createElement("button");
+        btn.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb, price }))
+        });
+        btn.innerHTML = "ADD <sup>+</sup>"
+
+
+        div2.append(p, price)
+        div.append(img, div2, btn);
+        also.append(div);
+    });
+}
+
+
+
+
+document.getElementById("close").addEventListener("click", function () {
+    document.querySelector(".sideCartMain").style.display = "none";
+    document.querySelector(".cartmain").style = `
+    grid-template-areas: "c c c c c c c c c c c c ";
+    `;
+})
