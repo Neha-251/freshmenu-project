@@ -64,7 +64,7 @@ function appendData(meals) {
         let div2 = document.createElement("div");
 
         let price = document.createElement("p");
-        price.innerText = "₹ 250"
+        price.innerHTML = "₹ 249";
         let btn = document.createElement("button");
         btn.setAttribute("id", "cartBtn");
         btn.addEventListener("click", function () {
@@ -87,9 +87,15 @@ function deBounce() {
         if (food_waiting) {
             clearTimeout(food_waiting);
         }
+
+
         food_waiting = setTimeout(function () {
             foodSearch();
+            alsolike();
+
         }, 2000);
+
+
         document.querySelector(".searchFoodResults").style.display = "block";
         document.querySelector(".topCata").style.display = "none";
     } else {
@@ -99,6 +105,9 @@ function deBounce() {
 
 
 }
+
+
+var cart = JSON.parse(localStorage.getItem("CartData")) || []
 function sideCart({ strMeal, strMealThumb, price }) {
     document.querySelector(".cartmain").style = `
     grid-template-areas: "c c c c c c c c c s s s ";
@@ -106,29 +115,28 @@ function sideCart({ strMeal, strMealThumb, price }) {
     document.querySelector(".sideCartMain").style.display = "block";
     document.querySelector(".container").style.width = "90%";
 
-    var cart = JSON.parse(localStorage.getItem("CartData")) || []
     let cartData = {
         strMeal,
         strMealThumb,
-        price: price.innerText
+        price: 249
     }
-    appendCart(cartAppend)
     cart.push(cartData)
     localStorage.setItem("CartData", JSON.stringify(cart));
+    appendCart(cart)
+    cartTotal()
 
     console.log(cartData)
 
 }
 
-let cartAppend = JSON.parse(localStorage.getItem("CartData")) || [];
 
-function appendCart(cartAppend) {
+function appendCart(cart) {
     let sideCartData = document.querySelector(".sideCart");
 
     document.querySelector(".sideCart").innerHTML = "";
-    document.querySelector("#cartLength").innerHTML = `${cartAppend.length} items`;
+    document.querySelector("#cartLength").innerHTML = `${cart.length} items`;
 
-    cartAppend.map(function (elem, index) {
+    cart.map(function (elem, index) {
         let div = document.createElement("div");
         div.setAttribute("class", "sideCartDiv")
 
@@ -171,45 +179,99 @@ function appendCart(cartAppend) {
 
 
 
+function cartTotal() {
+    var cTotal = document.querySelector(".total");
+    var parsedData = JSON.parse(localStorage.getItem("CartData"));
+    var cartTotal = 0;
+    parsedData.map((data) => {
+        cartTotal += Number(data.price);
+    });
+
+    cTotal.innerHTML = `₹ ${cartTotal}`;
+    console.log(cartTotal)
 
 
-
-let counterDisplayElem = document.querySelector('#count');
-let counterMinusElem = document.querySelector('#dec');
-let counterPlusElem = document.querySelector('#inc');
-
-let counter = 1;
-
-
-counterPlusElem.addEventListener("click", () => {
-    counter++;
-    counterDisplayElem.innerHTML = counter;
-});
-
-counterMinusElem.addEventListener("click", () => {
-    counter--;
-    counterDisplayElem.innerHTML = counter;
-});
+}
 
 
 
 
 function dec(index) {
 
-    if (counter <= 1) {
-        cartAppend.splice(index, 1);
-        localStorage.setItem("CartData", JSON.stringify(cartAppend));
-        appendCart(cartAppend)
-    }
+    cart.splice(index, 1);
+    localStorage.setItem("CartData", JSON.stringify(cart));
+    appendCart(cart)
+    cartTotal()
+
 }
 
 
-// const successCallback = (position) => {
+document.getElementById("placeOrder").addEventListener("click", function () {
+    window.location.href = "paymentbycard.html"
+})
 
-//     console.log(position);
-// }
-// const errorCallback = (error) => {
 
-//     console.error(error);
-// }
-// navigator.geolocation.getcurrentPosition(successCallback, errorCallback);
+
+
+// ---alsolike----
+
+async function alsolike() {
+    try {
+
+        searchBox = document.querySelector("#searchBox").value;
+
+        let res = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+        );
+        let data = await res.json();
+        let meal = data.meals;
+        appendLike(meal)
+        console.log("also", meal);
+    } catch (err) {
+        console.log("er:", err);
+    }
+}
+
+function appendLike(meals) {
+
+    let also = document.querySelector(".alsolike");
+    also.innerHTML = "";
+    if (meals == undefined) {
+        return false;
+    }
+
+    meals.forEach(({ strMeal, strMealThumb }) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "likeDiv")
+
+        let img = document.createElement("img");
+        img.src = strMealThumb;
+        let p = document.createElement("p");
+        p.innerText = strMeal;
+
+        let div2 = document.createElement("div");
+
+        let price = document.createElement("p");
+        price.innerHTML = "₹ 249";
+        let btn = document.createElement("button");
+        btn.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb, price }))
+        });
+        btn.innerHTML = "ADD <sup>+</sup>"
+
+
+        div2.append(p, price)
+        div.append(img, div2, btn);
+        also.append(div);
+    });
+}
+
+
+
+
+document.getElementById("close").addEventListener("click", function () {
+    document.querySelector(".sideCartMain").style.display = "none";
+    document.querySelector(".cartmain").style = `
+    grid-template-areas: "c c c c c c c c c c c c ";
+    `;
+})

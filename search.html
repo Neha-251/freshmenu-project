@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="search.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -95,13 +95,26 @@
 
       <div class="sideCartMain">
         <h2>Your Cart</h2>
+        <i class="fas fa-times" id="close"></i>
         <p id="cartLength"></p>
         <div class="sideCart"></div>
         <div class="check">
-          <button>CheckOut</button>
+          <button id="placeOrder">
+            Place Order - <span class="total"></span>
+          </button>
+        </div>
+        <div class="delivery">
+          <p>Safety Assured meals and contactless delivery</p>
+        </div>
+
+        <div class="alsolikeMain">
+          <div class="heading">
+            <h4>You May Also Like</h4>
+          </div>
+          <div class="alsolike"></div>
         </div>
       </div>
     </div>
   </body>
 </html>
-<script src="search.js"></script>
+<script src="./scripts/search.js"></script>
