@@ -1,4 +1,9 @@
-let searchBox;
+import header from "../components/header.js"
+var head = document.getElementById("header");
+head.innerHTML = header();
+
+var searchBox;
+document.getElementById("clearBtn").addEventListener("click",clearData);
 function clearData() {
     searchBox = document.getElementById("searchBox").value;
 

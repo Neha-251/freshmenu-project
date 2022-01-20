@@ -9,75 +9,7 @@ body {
   background-color: whitesmoke;
 }
 
-#header {
-  width: 100%;
-  display: flex;
-  background-color: white;
-  padding: 6px;
-  border-bottom: 1px solid lightgray;
-}
-.img {
-  display: flex;
-  width: 33%;
-  margin-left: 7%;
-  align-items: center;
-}
-.img img {
-  width: 42%;
-}
-.img h4 {
-  padding-left: 23px;
-  color: grey;
-}
-.img span {
-  color: #df561d;
-}
-.rightHead {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 44%;
-}
 
-.freshpass {
-  background-color: #fbd020;
-  height: 123%;
-  padding-top: 12px;
-  cursor: pointer;
-}
-.freshpass p {
-  padding: 0 12px;
-  font-weight: bold;
-}
-
-.freshpass p i {
-  margin-left: -2px;
-  padding-right: 8px;
-}
-.try {
-  background-color: #603b6d;
-  height: 123%;
-  padding-top: 22px;
-  cursor: pointer;
-}
-.try p {
-  padding: 0 14px;
-  font-weight: bold;
-  color: white;
-}
-.dapps {
-  display: flex;
-  align-items: center;
-  padding-left: 23px;
-  cursor: pointer;
-  font-weight: bold;
-  color: grey;
-  transition: 0.1s ease-in;
-}
-
-.dapps:hover {
-  color: #e85826;
-}
 .container {
   width: 100%;
   margin: auto;

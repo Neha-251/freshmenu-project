@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/search.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles/header.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -20,31 +21,7 @@
   <body>
     <div class="cartmain">
       <div class="container">
-        <div id="header">
-          <div class="img">
-            <img
-              src="https://www.freshmenu.com/images/fm-header-logo.svg"
-              alt=""
-            />
-            <h4>
-              Deliver to:
-              <span>Indore, Madhya...<i class="fas fa-chevron-down"></i></span>
-            </h4>
-          </div>
-
-          <div class="rightHead">
-            <div class="freshpass">
-              <p><i class="fas fa-ticket-alt"></i>FreshPass</p>
-              <p>Get extra 20% off</p>
-            </div>
-            <div class="try">
-              <p>Try FreshClub</p>
-            </div>
-          </div>
-          <div class="dapps">
-            <p>Download App</p>
-          </div>
-        </div>
+        <div id="header"></div>
         <div class="secondpart">
           <div class="mainmenu">
             <a href="">Back to Menu</a>
@@ -52,7 +29,7 @@
           <div class="search">
             <i class="fas fa-search"></i>
             <input type="text" name="" id="searchBox" placeholder="Search" />
-            <button id="btn" onclick="clearData()">Clear</button>
+            <button id="clearBtn">Clear</button>
           </div>
           <div class="searchFoodResults">
             <div class="heading">
@@ -147,4 +124,4 @@
     </div>
   </body>
 </html>
-<script src="./scripts/search.js"></script>
+<script type="module" src="./scripts/search.js"></script>
