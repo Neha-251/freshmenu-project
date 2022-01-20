@@ -113,7 +113,8 @@ function sideCart({ strMeal, strMealThumb, price }) {
     grid-template-areas: "c c c c c c c c c s s s ";
     `;
     document.querySelector(".sideCartMain").style.display = "block";
-    document.querySelector(".container").style.width = "90%";
+    document.querySelector(".container").style.width = "100%";
+    document.querySelector(".secondpart").style.width = "90%";
 
     let cartData = {
         strMeal,

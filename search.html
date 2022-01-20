@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Search</title>
     <link rel="stylesheet" href="./styles/search.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,74 +20,104 @@
   <body>
     <div class="cartmain">
       <div class="container">
-        <div class="search">
-          <i class="fas fa-search"></i>
-          <input type="text" name="" id="searchBox" placeholder="Search" />
-          <button id="btn" onclick="clearData()">Clear</button>
-        </div>
-        <div class="searchFoodResults">
-          <div class="heading">
-            <h2>SEARCH RESULTS</h2>
-            <hr />
+        <div id="header">
+          <div class="img">
+            <img
+              src="https://www.freshmenu.com/images/fm-header-logo.svg"
+              alt=""
+            />
+            <h4>
+              Deliver to:
+              <span>Indore, Madhya...<i class="fas fa-chevron-down"></i></span>
+            </h4>
           </div>
-          <div id="searchResult"></div>
-        </div>
 
-        <div class="error">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJHPN7qX-5zSsOXjCIRJblCIkeWx_I_gPWQ&usqp=CAU"
-            alt="error img"
-          />
-          <h2>No Dishes Found</h2>
-        </div>
-
-        <div class="topCata">
-          <div class="heading">
-            <h2>TOP CATEGORIES</h2>
-            <hr />
+          <div class="rightHead">
+            <div class="freshpass">
+              <p><i class="fas fa-ticket-alt"></i>FreshPass</p>
+              <p>Get extra 20% off</p>
+            </div>
+            <div class="try">
+              <p>Try FreshClub</p>
+            </div>
           </div>
-          <div class="fooditems">
-            <div class="foodDiv">
-              <h4>Continental</h4>
+          <div class="dapps">
+            <p>Download App</p>
+          </div>
+        </div>
+        <div class="secondpart">
+          <div class="mainmenu">
+            <a href="">Back to Menu</a>
+          </div>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" name="" id="searchBox" placeholder="Search" />
+            <button id="btn" onclick="clearData()">Clear</button>
+          </div>
+          <div class="searchFoodResults">
+            <div class="heading">
+              <h2>SEARCH RESULTS</h2>
+              <hr />
             </div>
-            <div class="foodDiv">
-              <h4>Pan-Asian</h4>
+            <div id="searchResult"></div>
+          </div>
+
+          <div class="error">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJHPN7qX-5zSsOXjCIRJblCIkeWx_I_gPWQ&usqp=CAU"
+              alt="error img"
+            />
+            <h2>No Dishes Found</h2>
+          </div>
+
+          <div class="topCata">
+            <div class="heading">
+              <h2>TOP CATEGORIES</h2>
+              <hr />
             </div>
-            <div class="foodDiv">
-              <h4>797 cal | Calories</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>625 cal | Calories</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>Indian</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>Asian</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>597 cal | Low Calories</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>South Indian</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>356 cal | Low Calories</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>Fusion</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>World Cuisine</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>Universal</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>569 cal | High Protein</h4>
-            </div>
-            <div class="foodDiv">
-              <h4>Oriental</h4>
+            <div class="fooditems">
+              <div class="foodDiv">
+                <h4>Continental</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>Pan-Asian</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>797 cal | Calories</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>625 cal | Calories</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>Indian</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>Asian</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>597 cal | Low Calories</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>South Indian</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>356 cal | Low Calories</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>Fusion</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>World Cuisine</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>Universal</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>569 cal | High Protein</h4>
+              </div>
+              <div class="foodDiv">
+                <h4>Oriental</h4>
+              </div>
             </div>
           </div>
         </div>
