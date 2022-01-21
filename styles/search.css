@@ -9,10 +9,24 @@ body {
   background-color: whitesmoke;
 }
 
+
 .container {
+  width: 100%;
+  margin: auto;
+}
+.secondpart {
   width: 80%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+.mainmenu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+.mainmenu a {
+  color: #e85826;
 }
 
 .search {
@@ -21,14 +35,14 @@ body {
 }
 .search input {
   flex: 1;
-  height: 50px;
+  height: 64px;
   outline: none;
   font-size: 18px;
   border: none;
 }
 .search i {
   font-size: 24px;
-  padding: 12px 22px;
+  padding: 20px 22px;
   background-color: white;
 }
 .search button {
@@ -94,7 +108,7 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 .productDiv img {
-  width: 100%;
+  width: 94%;
   height: 190px;
   border-radius: 10px;
   object-fit: cover;
@@ -161,10 +175,15 @@ body {
   grid-area: s;
   background-color: white;
   display: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.sideCartMain h2,
-p {
+.sideCartMain h2 {
+  padding: 6px 10px 0 10px;
+  font-size: 18px;
+}
+
+.sideCartMain p {
   padding: 6px 10px 0 10px;
   font-size: 18px;
 }
@@ -233,10 +252,74 @@ p {
 
 .delivery p {
   font-size: 16px;
-  color: green;
-  border: 1px solid green;
-  background-color: lightgreen;
+  color: #2ebd59;
+  border: 1px solid #2ebd59;
+  background-color: #e2feed;
   padding: 10px;
   border-radius: 8px;
   margin: 20px;
+}
+/* ---ALSOLIKE-- */
+.likeDiv {
+  width: 90%;
+  display: flex;
+  padding-bottom: 16px;
+  margin: 16px 20px;
+  border-bottom: 1px solid lightgrey;
+}
+.likeDiv img {
+  width: 98px;
+  height: 74px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.likeDiv img:hover {
+  transform: scale(1.1);
+}
+
+.likeDiv p {
+  padding: 4px 12px;
+  color: #4a4a4a;
+}
+
+.likeDiv div p {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+.likeDiv button {
+  padding: 8px 18px;
+  margin: 16px 8px;
+  font-weight: bold;
+  height: 34px;
+  font-size: 13px;
+  background-image: linear-gradient(to right, #f5914e, #e85826);
+  color: #fff;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+
+.heading h4 {
+  padding: 20px;
+  margin-top: -34px;
+  margin-bottom: -16px;
+}
+
+.alsolikeMain {
+  background-color: whitesmoke;
+}
+
+.sideCartMain i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 22px;
+  cursor: pointer;
 }

@@ -1,0 +1,388 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand&family=Roboto+Condensed:wght@300;400&display=swap');
+
+*{
+    font-family:'Quicksand', sans-serif;
+    padding: 0%;
+    margin: 0;
+    background-color: white;
+}
+#header_maindiv{
+    background-color: white;
+    position:relative;
+    margin-bottom: 30px;
+    height:125px;
+    width: 99.8%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* upper header part */
+
+
+#upper_nav{
+    height:65px;
+    width:100%;
+    border-bottom: 1px solid silver;
+    display: flex;
+    align-content: center;
+    
+}
+#freshmenu_logo_div{
+    width:200px;
+    height:100%;
+    margin-left: 10%;
+    align-self: center;
+    cursor: pointer;
+}
+#freshmenu_logo{
+    height: 80px;
+    width:150px;
+    align-self: center;
+    
+    
+}
+#deliverTo_div{
+    width:270px;
+    height:100%;
+    color:silver;
+    font-size: 15px;
+    
+    align-items:center ;
+    display: flex;
+    gap:10px;
+    font-weight: 500;
+}
+#deliverTo_div p{
+    color:rgb(232,88,40);
+    font-weight: 700;
+    cursor: pointer;
+}
+#deliver_arrow{
+    height:15px;
+    width:auto;
+    align-self: center;
+    cursor: pointer;
+} 
+#freshpass_div{
+    height:100%;
+    width:150px;
+    background-color: gold;
+    color:black;
+    margin-left: 20%;
+    justify-content: center;
+    cursor: pointer;
+}
+/* #freshpass_logo{
+    height:20px;
+    width:auto;
+    
+    align-self: center;
+    background: transparent;
+} */
+#freshpass_div_p1{
+    font-size: 16px;
+    font-weight: 800;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+#freshpass_div_p2{
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 38px;
+}
+#freshclub_div{
+    height:100%;
+    width:150px;
+    background-color: darkslateblue;
+    color:white;
+    font-size: 13px;
+    cursor: pointer;
+}
+#freshclub_div p{
+    margin-top:25px;
+    margin-left: 25px;
+    font-weight: 700;
+
+}
+#freshclub_logo{
+    height:10px;
+    width:auto;
+}
+#downloadApp_div{
+    height:100%;
+    width:150px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#downloadApp_div p{
+    margin-top: 25px;
+    margin-left: 10px;
+    font-weight: 600;
+    color:rgb(82, 81, 81);
+}
+#downloadApp_div p:hover{
+    color:chocolate;
+}
+
+
+/* upper header part */
+
+
+/* lower header part */
+
+#lower_nav{
+    height:65px;
+    width:100%;
+    
+    display: flex;
+    align-content: center;
+}
+
+#search_div{
+    height:40px;
+    width:120px;
+    border-radius: 20px;
+    justify-self: center;
+    display: flex;
+    margin-left: 60%;
+    margin-top: 8px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#search_div:hover{
+    background-color: rgb(212, 211, 211);
+}
+#search_logo{
+    height:20px;
+    width:auto;
+    margin-top: 5px;
+}
+#search_div p{
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 2px;
+    color:rgb(82, 81, 81);
+}
+
+#offers_div{
+    height:30px;
+    width:80px;
+    margin-left: 1%;
+    padding-top:10px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 8px;
+    border-radius: 18px;
+    cursor: pointer;
+    color:rgb(82, 81, 81);
+    font-weight: 600;
+}
+#offers_div:hover{
+    background-color: rgb(212, 211, 211);
+}
+#help_div{
+    height:30px;
+    width:30px;
+    margin-left: 1.5%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+#help_div:hover{
+    background-color: rgb(212, 211, 211);
+}
+#help_logo{
+    height:40px;
+    width:auto;
+    cursor: pointer;
+}
+
+#signup_div{
+    height:30px;
+    width:30px;
+    margin-left: 3%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+#signup_div:hover{
+    background-color: rgb(212, 211, 211);
+}
+#signup_logo{
+    height:30px;
+    width:auto;
+    cursor: pointer;
+}
+#cart_div{
+    
+    background-color: rgb(212, 211, 211);
+    height:90%;
+    width:60px;
+    margin-left: 3%;
+    justify-content: center;
+    align-items: center;
+    
+}
+#cart_logo{
+    height:40px;
+    width:auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* lower header part */
+
+#category_nav{
+    display:flex;
+    height:50px;
+    width:85%;
+    margin: auto;
+}
+#hr_category{
+   width:85%;
+   margin: 0px auto;
+}
+#category_heading{
+    margin-left: 3%;
+    font-size: 20px;
+}
+#veg_div{
+    margin-left: 60%;
+    font-size: 15px;
+    height:30px;
+    width:50px;
+    text-align: center;
+    padding-top: 5px;
+    border:1px solid dimgray;
+    border-radius: 5px;
+}
+#price_div{
+    margin-left: 2%;
+    font-size: 15px;
+    height:30px;
+    width:60px;
+    text-align: center;
+    padding-top: 5px;
+    border:1px solid dimgray;
+    border-radius: 5px;
+}
+#filter_div{
+    margin-left: 2%;
+    font-size: 15px;
+    height:30px;
+    width:100px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    border:1px solid dimgray;
+    display: flex;
+    border-radius: 5px;
+}
+#filter_div img{
+    height:20px;
+    width:auto;
+}
+
+#category_maindiv{
+    display: flex;
+    width:85%;
+    margin: 20px auto;
+
+}
+#category_list{
+    width:15%;
+    margin-left: 20px;
+    height:auto;
+    
+   
+}
+#category_list div{
+    height:30px;
+    width:100%;
+    padding:5px;
+    
+    font-size: 15px;
+    font-weight: 600;
+    color:dimgray;
+    
+}
+#category_list div:hover{
+    font-size: 18px;
+    text-decoration-line: underline;
+    text-decoration-color: chocolate;
+}
+#category_image{
+    border:1px solid red;
+    width:85%;
+    height:600px;
+    margin-left:10%;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-color: white;
+    scrollbar-width: 15px;
+    scroll-behavior: smooth;
+    transition: all ease 0.4s;
+}
+#buyOne, #rice, #noodle, #pasta, #biriyani, #fit, #keto, #burger, #breakfast, #accompaniments, #sandwitches, #sides, #desserts{
+    height:auto;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+    column-gap: 20px;
+}
+
+#maindiv{
+    height:280px;
+    width:300px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+
+#main_div_img{
+    height:200px;
+    width:300px;
+    border-radius: 15px;
+
+}
+/* #main_div_img:hover{
+    
+} */
+#sub_div1{
+    width:100%;
+    height:40px;
+    color:rgb(110, 109, 109);
+    margin-top: 5px;
+    font-weight: 600;
+
+}
+#sub_div2{
+    height:auto;
+    width:100%;
+    display:flex;
+}
+#sub_div2_div2{
+    height:25px;
+    width:50px;
+    padding: 5px 25px;
+    border-radius: 20px;
+    background-color: goldenrod;
+    color:white;
+    font-weight: 600;
+    margin-left: 180px;
+    
+}
+#sub_div2_div1{
+    height:40px;
+    width:200px;
+  
+    color:rgb(77, 77, 77);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
