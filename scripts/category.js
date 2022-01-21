@@ -918,11 +918,4 @@ document.getElementById("search_div").addEventListener("click", function () {
     window.location.href = "search.html"
 })
 
-// var head = document.getElementById("header");
-// head.innerHTML = header();
-
-
-import footer from "../components/footer.js";
-var foot = document.getElementById("footer");
-foot.innerHTML = footer();
 
