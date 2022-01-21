@@ -291,3 +291,19 @@ p {
   padding: 6px 10px 0 10px;
   font-size: 18px;
 }
+
+#inputaddress{
+  width: 280px;
+  height: 23px;
+}
+#addbtn{
+  width: 80px;
+  margin-left: 20px;
+}
+#divmap{
+  height: 290px;
+  width: 100%;
+  border: 1 px solid black;
+  background-color: white;
+margin-bottom: 15px;
+}

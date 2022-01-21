@@ -1,4 +1,69 @@
-document.querySelector("button").addEventListener("click", check_details);
+ //btn id= addbtn
+ let btn=document.getElementById("addbtn")
+ btn.onclick=()=>{
+     getWeather()
+ 
+ }
+ 
+ async function getWeather(){
+     try {
+ let city=document.getElementById("inputaddress").value;
+ 
+ 
+ let responce=await fetch(
+     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ddc894a0a38425be12ca6bbf79cb31e5&units=metric`
+     );
+ 
+ let data=await responce.json()
+ //showWhether(data);
+ addMap(city)
+ console.log("data:",data);
+ }catch(err) {
+     console.log("err:",err);
+ }
+ 
+ }
+ // function showWhether(weather){
+ //     let temp=document.createElement("p");
+ 
+ //     temp.innerHTML=`Temp-${weather.main.temp}`;
+     
+ 
+ //     let pressure=document.createElement("p");
+ //     pressure.innerHTML=`Pressure-${weather.main.temp}`;
+ 
+ //     let humidity=document.createElement("p");
+ //     humidity.innerHTML=`Humidity-${weather.main.humidity}`;
+ 
+ //     data.append(temp,pressure,humidity);
+ 
+ // }
+ 
+ 
+ function addMap(city){
+ 
+ 
+ 
+ 
+ let n=document.querySelector("#divmap")
+ n.innerHTML=` <iframe class="gmap_iframe"
+              frameborder="0" 
+              scrolling="no" 
+              marginheight="0"
+               marginwidth="0"
+               height="100%"
+               width="100%"
+               src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=${city}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+             </iframe>`
+ 
+ 
+ 
+ 
+ }
+
+
+
+document.querySelector("#sub").addEventListener("click", check_details);
 function check_details() {
     var card_nbr = document.querySelector("#card_nbr").value;
     var exp_mon = document.querySelector("#expiry_month").value;
@@ -91,3 +156,14 @@ function dec(index) {
     appendCart(cart);
     cartTotal();
 }
+
+
+
+
+
+
+
+
+
+
+
