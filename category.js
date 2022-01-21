@@ -85,7 +85,7 @@ const appendBuyone = (data_1) => {
 
     let { meals } = data_1;
 
-    let i = 90;
+    
 
     meals.forEach((elem) => {
 
@@ -114,8 +114,8 @@ const appendBuyone = (data_1) => {
         img.src = strMealThumb;
         sub_div1.innerHTML = strMeal;
 
-        sub_div2_div1.innerHTML = "₹" + " " + i;
-        i = i + 50;
+        sub_div2_div1.innerHTML = "₹" + " " + 150;
+        
         sub_div2_div2.innerHTML = "Add";
 
         main_div.append(img, sub_div1, sub_div2);
@@ -727,59 +727,59 @@ const appendDesserts = (data_1) => {
 //slides = rice, noodle, pasta, biriyani, fit, keto, burger, breakfast, snacks, sandwitches, sides, desserts
 
 
-let C1 = document.getElementById('C1');
-let C2 = document.getElementById('C2');
-let C3 = document.getElementById('C3');
-let C4 = document.getElementById('C4');
-let C5 = document.getElementById('C5');
-let C6 = document.getElementById('C6');
-let C7 = document.getElementById('C7');
-let C8 = document.getElementById('C8');
-let C9 = document.getElementById('C9');
-let C10 = document.getElementById('C10');
-let C11 = document.getElementById('C11');
-let C12 = document.getElementById('C12');
-let C13 = document.getElementById('C13');
+// let C1 = document.getElementById('C1');
+// let C2 = document.getElementById('C2');
+// let C3 = document.getElementById('C3');
+// let C4 = document.getElementById('C4');
+// let C5 = document.getElementById('C5');
+// let C6 = document.getElementById('C6');
+// let C7 = document.getElementById('C7');
+// let C8 = document.getElementById('C8');
+// let C9 = document.getElementById('C9');
+// let C10 = document.getElementById('C10');
+// let C11 = document.getElementById('C11');
+// let C12 = document.getElementById('C12');
+// let C13 = document.getElementById('C13');
 
-let category_img = document.getElementById('category_image');
+// let category_img = document.getElementById('category_image');
 
-C1.addEventListener("click", () => {
-    category_img.style.transform = 'translate(0%)';
-});
-C2.addEventListener("click", () => {
-    category_img.style.transform = 'translate(8%)';
-});
-C3.addEventListener("click", () => {
-    category_img.style.transform = 'translate(-16%)';
-});
-C4.addEventListener("click", () => {
-    category_img.style.transform = 'translate(-50%)';
-});
-C5.addEventListener("click", () => {
-    category_img.style.transform = 'translate(0%)';
-});
-C6.addEventListener("click", () => {
-    fit.style.transform = 'translate(0%)';
-});
-C7.addEventListener("click", () => {
-    keto.style.transform = 'translate(0%)';
-});
-C8.addEventListener("click", () => {
-    burger.style.transform = 'translate(0%)';
-});
-C9.addEventListener("click", () => {
-    breakfast.style.transform = 'translate(0%)';
-});
-C10.addEventListener("click", () => {
-    snacks.style.transform = 'translate(0%)';
-});
-C11.addEventListener("click", () => {
-    sandwitches.style.transform = 'translate(0%)';
-});
-C12.addEventListener("click", () => {
-    sides.style.transform = 'translate(0%)';
-});
-C13.addEventListener("click", () => {
-    desserts.style.transform = 'translate(0%)';
-});
+// C1.addEventListener("click", () => {
+//     category_img.style.transform = 'translate(0%)';
+// });
+// C2.addEventListener("click", () => {
+//     category_img.style.transform = 'translate(8%)';
+// });
+// C3.addEventListener("click", () => {
+//     category_img.style.transform = 'translate(-16%)';
+// });
+// C4.addEventListener("click", () => {
+//     category_img.style.transform = 'translate(-50%)';
+// });
+// C5.addEventListener("click", () => {
+//     category_img.style.transform = 'translate(0%)';
+// });
+// C6.addEventListener("click", () => {
+//     fit.style.transform = 'translate(0%)';
+// });
+// C7.addEventListener("click", () => {
+//     keto.style.transform = 'translate(0%)';
+// });
+// C8.addEventListener("click", () => {
+//     burger.style.transform = 'translate(0%)';
+// });
+// C9.addEventListener("click", () => {
+//     breakfast.style.transform = 'translate(0%)';
+// });
+// C10.addEventListener("click", () => {
+//     snacks.style.transform = 'translate(0%)';
+// });
+// C11.addEventListener("click", () => {
+//     sandwitches.style.transform = 'translate(0%)';
+// });
+// C12.addEventListener("click", () => {
+//     sides.style.transform = 'translate(0%)';
+// });
+// C13.addEventListener("click", () => {
+//     desserts.style.transform = 'translate(0%)';
+// });
 
