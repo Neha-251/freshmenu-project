@@ -2,6 +2,11 @@ import header from "../components/header.js"
 var head = document.getElementById("header");
 head.innerHTML = header();
 
+import footer from "../components/footer.js"
+var foot = document.getElementById("footer");
+foot.innerHTML = footer();
+
+
 
 async function categoryData() {
 
@@ -741,6 +746,12 @@ function sideCart({ strMeal, strMealThumb }) {
     document.querySelector(".container").style.width = "100%";
     document.querySelector(".secondpart").style.width = "110%";
     document.querySelector(".secondpart").style.marginLeft = "-6%";
+    document.querySelector("#category_list").style.marginLeft = "50px";
+    document.querySelector("#category_image").style.marginLeft = "0%";
+    document.querySelector("#category_image").style.width = "80%";
+    document.querySelector("#dodiv1").style.marginLeft = "4%";
+    document.querySelector("#dodiv2").style.marginLeft = "52px";
+    document.querySelector("#inp").style.width = "380px";
 
     let cartData = {
         strMeal,

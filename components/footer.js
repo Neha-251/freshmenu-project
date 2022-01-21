@@ -1,4 +1,4 @@
-function footer(){
+function footer() {
     return ` <hr>
     <div id="badadiv">
 
@@ -19,7 +19,7 @@ function footer(){
             </div>
 
             <div class="teendiv">
-                <h3>HELP AND CONTACT</h3>
+                <h3>HELP & CONTACT</h3>
                 <h4>Help Center</h4>
                 <h4>Email Us</h4>
                 <h4>080-4042-4242</h4>
@@ -43,7 +43,7 @@ function footer(){
 
           <div id="dodiv22">
               <input id="inp" type="text" placeholder="Enter Your Email">
-              <button id="btn1">Subcribe</button>
+              <button id="btn1">Subscribe</button>
           </div>
 
           <div style="margin-top: 70px;" id="dodiv23">
@@ -88,7 +88,7 @@ function footer(){
         </div>
 
 
-        <div id="nichekadiv2">
+        <div id="nichekadiv1">
             <h3>CUISINES</h3>
             <h4>Indian</h4>
             <h4>Chinese</h4>
