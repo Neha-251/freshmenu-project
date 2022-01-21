@@ -1,15 +1,15 @@
 #navbar {
-  height: 90px;
+  height: 120px;
   width: 100%;
   margin: 0;
   border: 2px solid black;
 }
 
 /* header css */
-#header {
+/* #header {
   width: 100%;
   display: flex;
-  background-color: white;
+  background-color: rgb(31, 22, 22);
   padding: 6px;
   border-bottom: 1px solid lightgray;
 }
@@ -74,17 +74,16 @@
 
 .dapps:hover {
   color: #e85826;
-}
+} */
 
 /* body css */
 
-#container {
-  height: 1800px;
+/* #container {
+  height: 5000px;
   width: 100%;
   /* display: flex; */
-  border: 2px solid black;
-}
-
+/* border: 2px solid black; */
+/* } */
 #container1 {
   height: 600px;
   width: 100%;
@@ -104,7 +103,7 @@
   height: 400px;
   width: 100%;
   margin-top: 35px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 #meal_image {
   height: 420px;
