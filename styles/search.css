@@ -9,10 +9,24 @@ body {
   background-color: whitesmoke;
 }
 
+
 .container {
+  width: 100%;
+  margin: auto;
+}
+.secondpart {
   width: 80%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+.mainmenu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+.mainmenu a {
+  color: #e85826;
 }
 
 .search {
@@ -94,7 +108,7 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 .productDiv img {
-  width: 100%;
+  width: 94%;
   height: 190px;
   border-radius: 10px;
   object-fit: cover;
@@ -164,8 +178,12 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.sideCartMain h2,
-p {
+.sideCartMain h2 {
+  padding: 6px 10px 0 10px;
+  font-size: 18px;
+}
+
+.sideCartMain p {
   padding: 6px 10px 0 10px;
   font-size: 18px;
 }

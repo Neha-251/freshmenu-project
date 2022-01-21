@@ -1,4 +1,9 @@
-let searchBox;
+import header from "../components/header.js"
+var head = document.getElementById("header");
+head.innerHTML = header();
+
+var searchBox;
+document.getElementById("clearBtn").addEventListener("click",clearData);
 function clearData() {
     searchBox = document.getElementById("searchBox").value;
 
@@ -113,7 +118,8 @@ function sideCart({ strMeal, strMealThumb, price }) {
     grid-template-areas: "c c c c c c c c c s s s ";
     `;
     document.querySelector(".sideCartMain").style.display = "block";
-    document.querySelector(".container").style.width = "90%";
+    document.querySelector(".container").style.width = "100%";
+    document.querySelector(".secondpart").style.width = "90%";
 
     let cartData = {
         strMeal,
