@@ -36,10 +36,14 @@
 }
 .freshpass p {
   padding: 0 12px;
+  background-color: #fbd020;
+
   font-weight: bold;
 }
 
 .freshpass p i {
+  background-color: #fbd020;
+
   margin-left: -2px;
   padding-right: 8px;
 }
@@ -51,6 +55,8 @@
 }
 .try p {
   padding: 0 14px;
+  background-color: #603b6d;
+
   font-weight: bold;
   color: white;
 }
