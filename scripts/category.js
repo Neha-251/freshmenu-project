@@ -90,7 +90,7 @@ const appendBuyone = (data_1) => {
 
     let { meals } = data_1;
 
-    
+
 
     meals.forEach((elem) => {
 
@@ -120,7 +120,7 @@ const appendBuyone = (data_1) => {
         sub_div1.innerHTML = strMeal;
 
         sub_div2_div1.innerHTML = "₹" + " " + 150;
-        
+
         sub_div2_div2.innerHTML = "Add";
         sub_div2_div2.addEventListener("click", function () {
             sideCart(({ strMeal, strMealThumb }))
@@ -963,4 +963,9 @@ document.getElementById("close").addEventListener("click", function () {
     document.querySelector(".cartmain").style = `
     grid-template-areas: "c c c c c c c c c c c c ";
     `;
+})
+
+
+document.getElementById("search_div").addEventListener("click", function () {
+    window.location.href = "search.html"
 })

@@ -4,20 +4,9 @@
   font-family: "Quicksand", sans-serif;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-.freshpass {
-  background-color: #fbd020;
-  height: 100%;
-  padding-top: 12px;
-  cursor: pointer;
-}
-.try {
-  background-color: #603b6d;
-  height: 100%;
-  padding-top: 31px;
-  cursor: pointer;
-}
 #header_maindiv {
   background-color: white;
   position: relative;
@@ -283,8 +272,8 @@
 
 #category_maindiv {
   display: flex;
-  width: 85%;
-  margin: 20px auto;
+  width: 95%;
+  margin: auto;
 }
 #category_list {
   width: 15%;
@@ -300,80 +289,84 @@
   font-weight: 600;
   color: dimgray;
 }
-#category_list{
-    width:15%;
-    margin-left: 20px;
-    height:auto;
-    /* position: relative; */
-    /* transform:translateY(-50%); */
-    /* margin:0; */
-    padding: 0;
-    z-index: 1;
-}
-   
-
-#category_list div{
-    height:30px;
-    width:100%;
-    padding:5px;
-    
-   
-    
-}
-#category_list div a{
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    color:dimgray;
+#category_list {
+  width: 15%;
+  margin-left: 20px;
+  height: auto;
+  /* position: relative; */
+  /* transform:translateY(-50%); */
+  /* margin:0; */
+  padding: 0;
+  z-index: 1;
 }
 
-
-#category_list div a:hover{
-    font-size: 18px;
-    text-decoration-line: underline;
-    text-decoration-color: chocolate;
+#category_list div {
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+}
+#category_list div a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: dimgray;
 }
 
-#category_image{
-    width:80%;
-    height:700px;
-    margin-left:10%;
-    overflow: scroll;
-    overflow-x: hidden;
-    transition: all ease 1s;
-    transition-duration: 1s;
-
-  
-}
-#buyOne, #rice, #noodle, #pasta, #biriyani, #fit, #keto, #burger, #breakfast, #accompaniments, #sandwitches, #sides, #desserts{
-    height:auto;
-    padding:50px 0;
-    width:auto;
-    position: relative;
-    /* overflow-y: scroll; */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 60px;
-    column-gap: 20px;
+#category_list div a:hover {
+  font-size: 18px;
+  text-decoration-line: underline;
+  text-decoration-color: chocolate;
 }
 
-#maindiv{
-    height:280px;
-    width:300px;
-    border-radius: 20px;
-    /* border-bottom: 1px thin silver; */
-    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 2px 5px 0px;    
-    cursor: pointer;
-    /* box-shadow: rgba(165, 165, 168, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
+#category_image {
+  width: 80%;
+  height: 700px;
+  margin-left: 10%;
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: all ease 1s;
+  transition-duration: 1s;
+}
+#buyOne,
+#rice,
+#noodle,
+#pasta,
+#biriyani,
+#fit,
+#keto,
+#burger,
+#breakfast,
+#accompaniments,
+#sandwitches,
+#sides,
+#desserts {
+  height: auto;
+  padding: 50px 0;
+  width: auto;
+  position: relative;
+  /* overflow-y: scroll; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 60px;
+  column-gap: 20px;
 }
 
-#main_div_img{
-    height:200px;
-    width:300px;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+#maindiv {
+  height: 280px;
+  width: 300px;
+  border-radius: 20px;
+  /* border-bottom: 1px thin silver; */
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 2px 5px 0px;
+  cursor: pointer;
+  /* box-shadow: rgba(165, 165, 168, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
+}
 
-    
+#main_div_img {
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 /* #main_div_img:hover{
     
@@ -391,14 +384,13 @@
   display: flex;
 }
 #sub_div2_div2 {
-  height: 25px;
-  width: 50px;
+  height: 29px;
+  width: 76px;
   padding: 5px 25px;
   border-radius: 20px;
   background-color: goldenrod;
   color: white;
   font-weight: 600;
-  margin-left: 180px;
 }
 #sub_div2_div1 {
   height: 40px;
