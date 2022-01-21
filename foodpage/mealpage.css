@@ -1,0 +1,116 @@
+#navbar {
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  border: 2px solid black;
+}
+
+#container {
+  height: 1600px;
+  width: 100%;
+  /* display: flex; */
+  border: 2px solid black;
+}
+
+#container1 {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  border: 2px solid blue;
+}
+
+#container2 {
+  height: 430px;
+  width: 100%;
+  margin-top: 100px;
+  border: 2px solid black;
+}
+
+#container3 {
+  height: 400px;
+  width: 100%;
+  margin-top: 35px;
+  border: 2px solid red;
+}
+#meal_image {
+  height: 420px;
+  width: 600px;
+  border: 2px solid black;
+  margin-right: 30px;
+  margin-left: 50px;
+}
+
+#meal_details {
+  height: 600px;
+  width: 650px;
+  border: 2px solid black;
+}
+
+h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+h1:before,
+h1:after {
+  background-color: black;
+  height: 1px;
+  display: inline-block;
+  content: "";
+  position: middle;
+  vertical-align: middle;
+  width: 10%;
+}
+
+h1:before {
+  right: 0.5em;
+  margin-left: -90%;
+}
+
+h1:after {
+  left: 0.5em;
+  margin-right: -90%;
+}
+
+#recomm {
+  height: 300px;
+  width: 70%;
+  margin-top: 20px;
+  display: flex;
+  border: 2px solid black;
+  margin-left: 15%;
+}
+
+#recomm > div {
+  height: 90%;
+  width: 24%;
+  margin-top: 15px;
+  margin-right: 20px;
+  border: 2px solid blue;
+}
+.imag {
+  height: 60%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.im_det {
+  height: 40%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.mealname {
+  height: 50%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.mprice {
+  height: 50%;
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
