@@ -272,14 +272,10 @@
 
 #category_maindiv {
   display: flex;
-  width: 95%;
+  width: 90%;
   margin: auto;
 }
-#category_list {
-  width: 15%;
-  margin-left: 20px;
-  height: auto;
-}
+
 #category_list div {
   height: 30px;
   width: 100%;
@@ -291,7 +287,8 @@
 }
 #category_list {
   width: 15%;
-  margin-left: 20px;
+  margin-left: 35px;
+  margin-top: 20px;
   height: auto;
   padding: 0;
   z-index: 1;
@@ -309,7 +306,7 @@
   color: dimgray;
 }
 
-#category_list div a:hover {
+#category_list div :hover {
   font-size: 18px;
   text-decoration-line: underline;
   text-decoration-color: chocolate;
