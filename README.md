@@ -1,4 +1,4 @@
-# freshmenu-project
+# freshmenu-clone project
 
 Freshmenu is the online go-to neighbourhood food delivery option you can turn to when you’re famished. Our chefs create a variety of plated meals on demand, to make sure that you are spoilt for choice. Since our menus change every day, we stand out from the throng of eateries that offer you a fixed menu.
 
