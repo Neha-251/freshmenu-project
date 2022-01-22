@@ -146,7 +146,7 @@ const appendBuyone = (data_1) => {
         img.src = strMealThumb;
         sub_div1.innerHTML = strMeal;
 
-        sub_div2_div1.innerHTML = "₹" + " " + 150;
+        sub_div2_div1.innerHTML = "₹" + " " + 249;
 
         sub_div2_div2.innerHTML = "Add";
         sub_div2_div2.addEventListener("click", function () {
