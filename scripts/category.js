@@ -212,6 +212,9 @@ const appendRice = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 60;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -270,6 +273,9 @@ const appendNoodle = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -330,6 +336,9 @@ const appendPasta = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -388,7 +397,9 @@ const appendBiriyani = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
-
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
@@ -449,6 +460,9 @@ const appendFit = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -509,6 +523,9 @@ const appendKeto = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -569,6 +586,9 @@ const appendBurger = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -629,6 +649,9 @@ const appendBreakfast = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -688,6 +711,9 @@ const appendSnacks = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -747,6 +773,9 @@ const appendSandwitches = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -806,7 +835,9 @@ const appendSides = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
-
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
@@ -865,7 +896,9 @@ const appendDesserts = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
-
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
@@ -1019,7 +1052,7 @@ async function alsolike() {
 
 
         let res = await fetch(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=American`
         );
         let data = await res.json();
         let meal = data.meals;
@@ -1078,5 +1111,9 @@ document.getElementById("close").addEventListener("click", function () {
 document.getElementById("search_div").addEventListener("click", function () {
     window.location.href = "search.html"
 })
+document.getElementById("help_div").addEventListener("click", function () {
+    window.location.href = "help.html"
+})
+
 
 

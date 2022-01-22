@@ -378,7 +378,7 @@ img {
   width: 76px;
   padding: 5px 25px;
   border-radius: 20px;
-  background-color: goldenrod;
+  background-image: linear-gradient(to right, #f5914e, #e85826);
   color: white;
   font-weight: 600;
 }
