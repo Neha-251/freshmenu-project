@@ -9,26 +9,26 @@ foot.innerHTML = footer();
 
 
 var slideIndex = 0;
-  showSlides();
+showSlides();
 
-  function showSlides() {
+function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     var slide = document.getElementsByClassName("slide");
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+        slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) {
-      slideIndex = 1;
+        slideIndex = 1;
     }
     for (i = 0; i < slide.length; i++) {
-      slide[i].className = slide[i].className.replace(" active", "");
+        slide[i].className = slide[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
     slide[slideIndex - 1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 3 seconds
-  }
+}
 
 
 
@@ -123,7 +123,7 @@ const appendBuyone = (data_1) => {
 
         let { strMeal } = elem;
         let { strMealThumb } = elem;
-       
+
         let main_div = document.createElement('div');
         main_div.setAttribute('id', "maindiv");
 
@@ -159,7 +159,7 @@ const appendBuyone = (data_1) => {
 
         buyOne.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
             //strMealId = JSON.stringify(strMealId);
@@ -219,7 +219,7 @@ const appendRice = (data_1) => {
 
         rice.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
             //strMealId = JSON.stringify(strMealId);
@@ -277,7 +277,7 @@ const appendNoodle = (data_1) => {
 
         noodle.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
             //strMealId = JSON.stringify(strMealId);
@@ -337,7 +337,7 @@ const appendPasta = (data_1) => {
 
         pasta.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -395,7 +395,7 @@ const appendBiriyani = (data_1) => {
 
         biriyani.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
             //strMealId = JSON.stringify(strMealId);
@@ -456,7 +456,7 @@ const appendFit = (data_1) => {
 
         fit.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -516,7 +516,7 @@ const appendKeto = (data_1) => {
 
         keto.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -576,7 +576,7 @@ const appendBurger = (data_1) => {
 
         burger.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -636,7 +636,7 @@ const appendBreakfast = (data_1) => {
 
         breakfast.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -695,7 +695,7 @@ const appendSnacks = (data_1) => {
 
         snacks.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -754,7 +754,7 @@ const appendSandwitches = (data_1) => {
 
         sandwitches.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -813,7 +813,7 @@ const appendSides = (data_1) => {
 
         sides.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -872,7 +872,7 @@ const appendDesserts = (data_1) => {
 
         desserts.append(main_div);
 
-        img.addEventListener("click", ()=> {
+        img.addEventListener("click", () => {
 
             let { idMeal } = elem;
 
@@ -906,6 +906,13 @@ function sideCart({ strMeal, strMealThumb }) {
     document.querySelector("#dodiv1").style.marginLeft = "4%";
     document.querySelector("#dodiv2").style.marginLeft = "52px";
     document.querySelector("#inp").style.width = "380px";
+
+    var carimg = document.querySelectorAll(".carimg")
+    for (let i = 0; i < carimg.length; i++) {
+        carimg[i].style.width = "30%";
+        carimg[i].style.height = "35%";
+    }
+
 
     let cartData = {
         strMeal,

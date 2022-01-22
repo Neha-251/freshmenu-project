@@ -101,7 +101,7 @@ function deBounce() {
         food_waiting = setTimeout(function () {
             foodSearch();
             alsolike();
-
+            continental();
         }, 2000);
 
 
@@ -288,3 +288,73 @@ document.getElementById("close").addEventListener("click", function () {
     grid-template-areas: "c c c c c c c c c c c c ";
     `;
 })
+
+document.querySelector(".foodDiv").addEventListener("click", continental);
+
+
+async function continental() {
+    if (true) {
+
+        document.querySelector(".topCata").style.display = "none";
+        document.querySelector(".searchFoodResults").style.display = "block";
+        try {
+
+
+            let res = await fetch(
+                `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+
+            );
+            let data = await res.json();
+            let meals = data.meals;
+
+            appendConti(meals);
+
+            console.log(meals);
+        } catch (err) {
+            console.log("er:", err);
+        }
+    } else {
+
+        document.querySelector(".topCata").style.display = "block";
+        document.querySelector(".searchFoodResults").style.display = "none";
+    }
+
+
+}
+
+function appendConti(meals) {
+
+    let searchResult = document.querySelector("#searchResult");
+    searchResult.innerHTML = "";
+    if (meals == undefined) {
+        return false;
+    }
+
+    meals.forEach(({ strMeal, strMealThumb }) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "productDiv")
+
+        let img = document.createElement("img");
+        img.src = strMealThumb;
+        let p = document.createElement("p");
+        p.setAttribute("id", "searchHistory");
+        p.innerText = strMeal;
+
+        let div2 = document.createElement("div");
+
+        let price = document.createElement("p");
+        price.innerHTML = "₹ 249";
+        let btn = document.createElement("button");
+        btn.setAttribute("id", "cartBtn");
+        btn.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb, price }))
+        });
+        btn.innerHTML = "ADD <sup>+</sup>"
+
+
+        div2.append(price, btn)
+        div.append(img, p, div2);
+        searchResult.append(div);
+    });
+}
+
