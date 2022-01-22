@@ -101,15 +101,16 @@ function deBounce() {
         food_waiting = setTimeout(function () {
             foodSearch();
             alsolike();
-            continental();
         }, 2000);
 
 
         document.querySelector(".searchFoodResults").style.display = "block";
         document.querySelector(".topCata").style.display = "none";
+        document.querySelector("#continental").style.display = "none";
     } else {
         document.querySelector(".searchFoodResults").style.display = "none";
         document.querySelector(".topCata").style.display = "block";
+
     }
 
 
@@ -147,6 +148,7 @@ function appendCart(cart) {
     let sideCartData = document.querySelector(".sideCart");
 
     document.querySelector(".sideCart").innerHTML = "";
+
     document.querySelector("#cartLength").innerHTML = `${cart.length} items`;
 
     cart.map(function (elem, index) {
@@ -293,39 +295,36 @@ document.querySelector(".foodDiv").addEventListener("click", continental);
 
 
 async function continental() {
-    if (true) {
 
-        document.querySelector(".topCata").style.display = "none";
-        document.querySelector(".searchFoodResults").style.display = "block";
-        try {
+    document.querySelector(".topCata").style.display = "none";
+    document.querySelector(".searchFoodResults").style.display = "block";
+    try {
 
 
-            let res = await fetch(
-                `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+        let res = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
 
-            );
-            let data = await res.json();
-            let meals = data.meals;
+        );
+        let Contdata = await res.json();
+        let meals = Contdata.meals;
 
-            appendConti(meals);
+        appendConti(meals);
 
-            console.log(meals);
-        } catch (err) {
-            console.log("er:", err);
-        }
-    } else {
-
-        document.querySelector(".topCata").style.display = "block";
-        document.querySelector(".searchFoodResults").style.display = "none";
+        console.log("cont", meals);
+    } catch (err) {
+        console.log("er:", err);
     }
+
 
 
 }
 
 function appendConti(meals) {
 
-    let searchResult = document.querySelector("#searchResult");
-    searchResult.innerHTML = "";
+    let searchResult2 = document.querySelector("#continental");
+    searchBox = document.getElementById("searchBox").value = "continental";
+
+    searchResult2.innerHTML = ""
     if (meals == undefined) {
         return false;
     }
@@ -354,7 +353,7 @@ function appendConti(meals) {
 
         div2.append(price, btn)
         div.append(img, p, div2);
-        searchResult.append(div);
+        searchResult2.append(div);
     });
 }
 
