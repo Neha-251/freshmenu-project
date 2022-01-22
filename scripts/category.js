@@ -3,6 +3,30 @@ var head = document.getElementById("header");
 head.innerHTML = header();
 
 
+var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var slide = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < slide.length; i++) {
+      slide[i].className = slide[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    slide[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 3 seconds
+  }
+
+
+
 async function categoryData() {
 
     try {
@@ -90,13 +114,11 @@ const appendBuyone = (data_1) => {
 
     let { meals } = data_1;
 
-
-
     meals.forEach((elem) => {
 
         let { strMeal } = elem;
         let { strMealThumb } = elem;
-
+       
         let main_div = document.createElement('div');
         main_div.setAttribute('id', "maindiv");
 
@@ -132,8 +154,18 @@ const appendBuyone = (data_1) => {
 
         buyOne.append(main_div);
 
-    });
+        img.addEventListener("click", ()=> {
 
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
+    });
 
 }
 
@@ -182,6 +214,16 @@ const appendRice = (data_1) => {
 
         rice.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
     });
 }
 
@@ -229,6 +271,17 @@ const appendNoodle = (data_1) => {
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         noodle.append(main_div);
+
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -279,6 +332,16 @@ const appendPasta = (data_1) => {
 
         pasta.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
     });
 }
 
@@ -326,6 +389,17 @@ const appendBiriyani = (data_1) => {
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         biriyani.append(main_div);
+
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -377,6 +451,16 @@ const appendFit = (data_1) => {
 
         fit.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
     });
 
 
@@ -426,6 +510,16 @@ const appendKeto = (data_1) => {
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         keto.append(main_div);
+
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -477,6 +571,16 @@ const appendBurger = (data_1) => {
 
         burger.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
     });
 
 
@@ -527,6 +631,16 @@ const appendBreakfast = (data_1) => {
 
         breakfast.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
     });
 
 
@@ -575,6 +689,16 @@ const appendSnacks = (data_1) => {
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         snacks.append(main_div);
+
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -625,6 +749,16 @@ const appendSandwitches = (data_1) => {
 
         sandwitches.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
     });
 
 
@@ -674,6 +808,16 @@ const appendSides = (data_1) => {
 
         sides.append(main_div);
 
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
     });
 
 
@@ -722,6 +866,16 @@ const appendDesserts = (data_1) => {
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         desserts.append(main_div);
+
+        img.addEventListener("click", ()=> {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 

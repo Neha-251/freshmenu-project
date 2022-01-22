@@ -2,41 +2,35 @@
   height: 70px;
   width: 100%;
   margin: 0;
-  border: 2px solid black;
 }
 
 #container {
-  height: 1600px;
+  height: auto;
   width: 100%;
   /* display: flex; */
-  border: 2px solid black;
 }
 
 #container1 {
   height: 600px;
-  width: 100%;
+  width: 90%;
   display: flex;
-  margin-top: 20px;
-  border: 2px solid blue;
+  margin: 20px auto;
 }
 
 #container2 {
   height: 430px;
   width: 100%;
   margin-top: 100px;
-  border: 2px solid black;
 }
 
 #container3 {
   height: 400px;
   width: 100%;
   margin-top: 35px;
-  border: 2px solid red;
 }
 #meal_image {
   height: 420px;
   width: 600px;
-  border: 2px solid black;
   margin-right: 30px;
   margin-left: 50px;
 }
@@ -44,7 +38,6 @@
 #meal_details {
   height: 600px;
   width: 650px;
-  border: 2px solid black;
 }
 
 h1 {
@@ -78,7 +71,6 @@ h1:after {
   width: 70%;
   margin-top: 20px;
   display: flex;
-  border: 2px solid black;
   margin-left: 15%;
 }
 
@@ -87,18 +79,15 @@ h1:after {
   width: 24%;
   margin-top: 15px;
   margin-right: 20px;
-  border: 2px solid blue;
 }
 .imag {
   height: 60%;
   width: 100%;
-  border: 1px solid black;
 }
 
 .im_det {
   height: 40%;
   width: 100%;
-  border: 1px solid black;
 }
 
 .mealname {
@@ -113,4 +102,165 @@ h1:after {
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
+}
+
+#name_p{
+  /* height:30px;
+  width:auto; */
+  font-size: 25px;
+  color:rgb(49, 49, 49);
+  font-weight: 600;
+}
+#country_p{
+  font-size: 20px;
+  color:rgb(80, 80, 80);
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+#price_p{
+  font-size: 25px;
+  color: black;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#add_div{
+  height: 29px;
+  width: 76px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  background-color: rgb(234,95,43);
+  color: white;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+#detailsMeal_div{
+  height:auto;
+  width:500px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+#details_head{
+  font-size: 25px;
+  color:rgb(80, 80, 80);
+  font-weight: 600;
+}
+
+#details_description{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  color:rgb(80, 80, 80);
+
+}
+
+#category_div{
+  height: 60px;
+  width:100px;
+  margin-top: 40px;
+  margin-left:20px;
+}
+
+#category_img{
+  height:25px;
+  width:auto;
+}
+
+#category_p{
+  font-size: 15px;
+  font-weight: 500;
+  color:rgb(80, 80, 80);
+}
+
+#ingredient_div{
+  height:auto;
+  width:500px;
+  padding:10px;
+}
+#ingredient_p1{
+  margin-bottom: 10px;
+  font-size: 20px;
+  color:rgb(80, 80, 80);
+
+}
+#ingredient_p2{
+  font-size: 15px;
+  font-weight: 500;
+  color:rgb(80, 80, 80);
+
+}
+#main_img{
+  height:400px;
+  width:600px;
+}
+
+#ran_meal{
+  height: 300px;
+  width: 900px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  margin: 30px auto;
+}
+
+#ran_main{
+  height: 250px;
+  width: 200px;
+}
+#ran_div1{
+  height:260px;
+  width:200px;
+  margin-top:10px;
+}
+#ran_div2{
+  height:25px;
+  width:200px;
+  display: flex;
+  margin-top: 10px;
+}
+
+#ran_img{
+  height:200px;
+  width:200px;
+
+}
+#ran_p1{
+  height:30px;
+  width:200px;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+  color: rgb(80, 80, 80);
+}
+#ran_p2{
+  height:30px;
+  width:200px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+
+  color:rgb(129, 128, 128);
+}
+
+#ran_div2_div1{
+  height:20px;
+  width:50px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+
+  color:rgb(107, 106, 106);
+}
+#ran_div2_div2{
+  height: 29px;
+  width: 76px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  background-color: rgb(234,95,43);
+  color: white;
+  font-weight: 600;
+  margin-left:70px;
 }

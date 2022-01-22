@@ -3,57 +3,36 @@
   <head>
     <title>Document</title>
     <link rel="stylesheet" href="./styles/mealpage.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/category.css" />
   </head>
   <body>
+
+<div id="header"></div>
+
     <div id="navbar"></div>
     <div id="container">
       <div id="container1">
         <div id="meal_image"></div>
-        <div id="meal_details"></div>
+        <div id="meal_details"> </div>
       </div>
 
       <div id="container2">
         <h1>YOU MIGHT ALSO LIKE</h1>
-        <div id="recomm">
-          <div id="box1">
-            <div class="imag" id="b1"></div>
-            <div class="im_det">
-              <div class="mealname" id="m1"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-          <div id="box2">
-            <div class="imag" id="b2"></div>
-            <div class="im_det">
-              <div class="mealname"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-          <div id="box3">
-            <div class="imag" id="b3"></div>
-            <div class="im_det">
-              <div class="mealname"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-          <div id="box4">
-            <div class="imag" id="b4"></div>
-            <div class="im_det">
-              <div class="mealname"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-        </div>
+        <div id="ran_meal"></div>
       </div>
-      <div id="container3"></div>
     </div>
+
+<div id="footer"></div>
+
   </body>
 </html>
 
-<script>
-  let title = document.createElement("p");
-  let cont2 = document.getElementById("container2");
-  let recommended = document.getElementById("recomm");
+<script type="module" src="./scripts/mealpage.js">
+  // let title = document.createElement("p");
+  // let cont2 = document.getElementById("container2");
+  // let recommended = document.getElementById("recomm");
 
   // async function recom_meal() {
   //   let area = {
