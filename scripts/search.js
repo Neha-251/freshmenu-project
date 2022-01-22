@@ -236,7 +236,7 @@ async function alsolike() {
         searchBox = document.querySelector("#searchBox").value;
 
         let res = await fetch(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=American`
         );
         let data = await res.json();
         let meal = data.meals;
@@ -295,14 +295,14 @@ document.querySelector(".foodDiv").addEventListener("click", continental);
 
 
 async function continental() {
-
+    alsolike();
     document.querySelector(".topCata").style.display = "none";
     document.querySelector(".searchFoodResults").style.display = "block";
     try {
 
 
         let res = await fetch(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`
 
         );
         let Contdata = await res.json();
