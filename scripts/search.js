@@ -2,8 +2,12 @@ import header from "../components/header.js"
 var head = document.getElementById("header");
 head.innerHTML = header();
 
+import footer from "../components/footer.js"
+var foot = document.getElementById("footer");
+foot.innerHTML = footer();
+
 var searchBox;
-document.getElementById("clearBtn").addEventListener("click",clearData);
+document.getElementById("clearBtn").addEventListener("click", clearData);
 function clearData() {
     searchBox = document.getElementById("searchBox").value;
 
@@ -119,7 +123,10 @@ function sideCart({ strMeal, strMealThumb, price }) {
     `;
     document.querySelector(".sideCartMain").style.display = "block";
     document.querySelector(".container").style.width = "100%";
-    document.querySelector(".secondpart").style.width = "90%";
+    document.querySelector(".secondpart").style.width = "94%";
+    document.querySelector("#dodiv1").style.marginLeft = "4%";
+    document.querySelector("#dodiv2").style.marginLeft = "52px";
+    document.querySelector("#inp").style.width = "380px";
 
     let cartData = {
         strMeal,
