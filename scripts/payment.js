@@ -23,22 +23,6 @@
  }
  
  }
- // function showWhether(weather){
- //     let temp=document.createElement("p");
- 
- //     temp.innerHTML=`Temp-${weather.main.temp}`;
-     
- 
- //     let pressure=document.createElement("p");
- //     pressure.innerHTML=`Pressure-${weather.main.temp}`;
- 
- //     let humidity=document.createElement("p");
- //     humidity.innerHTML=`Humidity-${weather.main.humidity}`;
- 
- //     data.append(temp,pressure,humidity);
- 
- // }
- 
  
  function addMap(city){
  
@@ -160,6 +144,9 @@ function dec(index) {
 
 
 
+document.getElementById("homeimg").addEventListener("click", function () {
+    window.location.href = "index.html"
+})
 
 
 

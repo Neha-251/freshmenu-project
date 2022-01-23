@@ -13,6 +13,7 @@
 }
 .img img {
   width: 42%;
+  cursor: pointer;
 }
 .img h4 {
   padding-left: 23px;

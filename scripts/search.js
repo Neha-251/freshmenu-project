@@ -357,3 +357,6 @@ function appendConti(meals) {
     });
 }
 
+document.getElementById("homeimg").addEventListener("click", function () {
+    window.location.href = "index.html"
+})

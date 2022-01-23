@@ -1144,3 +1144,8 @@ cartdiv.addEventListener("click", function () {
     cartTotal()
 
 });
+
+
+document.getElementById("homeimg").addEventListener("click", function () {
+    window.location.href = "index.html"
+})

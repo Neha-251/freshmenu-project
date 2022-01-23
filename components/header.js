@@ -1,8 +1,9 @@
 function header() {
-    return `  <div class="img">
+  return `  <div class="img">
     <img
       src="https://www.freshmenu.com/images/fm-header-logo.svg"
       alt=""
+      id="homeimg"
     />
     <h4>
       Deliver to:
