@@ -1,36 +1,36 @@
- //btn id= addbtn
- let btn=document.getElementById("addbtn")
- btn.onclick=()=>{
-     getWeather()
- 
- }
- 
- async function getWeather(){
-     try {
- let city=document.getElementById("inputaddress").value;
- 
- 
- let responce=await fetch(
-     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ddc894a0a38425be12ca6bbf79cb31e5&units=metric`
-     );
- 
- let data=await responce.json()
- //showWhether(data);
- addMap(city)
- console.log("data:",data);
- }catch(err) {
-     console.log("err:",err);
- }
- 
- }
- 
- function addMap(city){
- 
- 
- 
- 
- let n=document.querySelector("#divmap")
- n.innerHTML=` <iframe class="gmap_iframe"
+//btn id= addbtn
+let btn = document.getElementById("addbtn")
+btn.onclick = () => {
+    getWeather()
+
+}
+
+async function getWeather() {
+    try {
+        let city = document.getElementById("inputaddress").value;
+
+
+        let responce = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ddc894a0a38425be12ca6bbf79cb31e5&units=metric`
+        );
+
+        let data = await responce.json()
+        //showWhether(data);
+        addMap(city)
+        console.log("data:", data);
+    } catch (err) {
+        console.log("err:", err);
+    }
+
+}
+
+function addMap(city) {
+
+
+
+
+    let n = document.querySelector("#divmap")
+    n.innerHTML = ` <iframe class="gmap_iframe"
               frameborder="0" 
               scrolling="no" 
               marginheight="0"
@@ -39,11 +39,11 @@
                width="100%"
                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=${city}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
              </iframe>`
- 
- 
- 
- 
- }
+
+
+
+
+}
 
 
 
@@ -148,7 +148,9 @@ document.getElementById("homeimg").addEventListener("click", function () {
     window.location.href = "index.html"
 })
 
-
+document.getElementById("help_div").addEventListener("click", function () {
+    window.location.href = "help.html"
+})
 
 
 
