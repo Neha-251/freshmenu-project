@@ -1114,6 +1114,33 @@ document.getElementById("search_div").addEventListener("click", function () {
 document.getElementById("help_div").addEventListener("click", function () {
     window.location.href = "help.html"
 })
+var cartdiv = document.getElementById("cart_div");
+
+cartdiv.addEventListener("click", function () {
+    document.querySelector(".cartmain").style = `
+    grid-template-areas: "c c c c c c c c c s s s ";
+    `;
+    document.querySelector(".sideCartMain").style.display = "block";
+    document.querySelector(".container").style.width = "100%";
+    document.querySelector(".secondpart").style.width = "110%";
+    document.querySelector(".secondpart").style.marginLeft = "-6%";
+    document.querySelector("#category_list").style.marginLeft = "50px";
+    document.querySelector("#category_image").style.marginLeft = "0%";
+    document.querySelector("#category_image").style.width = "80%";
+    document.querySelector("#dodiv1").style.marginLeft = "4%";
+    document.querySelector("#dodiv2").style.marginLeft = "52px";
+    document.querySelector("#inp").style.width = "380px";
+
+    var carimg = document.querySelectorAll(".carimg")
+    for (let i = 0; i < carimg.length; i++) {
+        carimg[i].style.width = "30%";
+        carimg[i].style.height = "35%";
+    }
 
 
 
+    localStorage.setItem("CartData", JSON.stringify(cart));
+    appendCart(cart)
+    cartTotal()
+
+});

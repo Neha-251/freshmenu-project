@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 #checkouter {
   height: auto;
   width: 100%;
@@ -5,8 +9,36 @@
   background-color: #ececec;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-top: 30px;
 }
 
+#header {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  padding: 12px;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.img {
+  margin-right: 36%;
+}
+#help_div {
+  height: 33px;
+  width: 54px;
+  margin-left: 1%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border-radius: 50px;
+  transition: 0.5s ease;
+}
+#help_div:hover {
+  background-color: #f2f3f3;
+}
 #checkouter img,
 h2,
 p,
@@ -292,18 +324,18 @@ p {
   font-size: 18px;
 }
 
-#inputaddress{
+#inputaddress {
   width: 280px;
   height: 23px;
 }
-#addbtn{
+#addbtn {
   width: 80px;
   margin-left: 20px;
 }
-#divmap{
+#divmap {
   height: 290px;
   width: 100%;
   border: 1 px solid black;
   background-color: white;
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }

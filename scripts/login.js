@@ -20,9 +20,9 @@ function loginsucess() {
         alert(otimep);
         let enter = prompt("Enter OTP");
         if (enter != null && Number(enter) === otimep) {
-            setTimeout(function() {
+            setTimeout(function () {
                 alert("Login sucessfull")
-                window.location.href = "./success.html"
+                window.location.href = "index.html"
             }, 0);
         } else {
             alert("Invalid OTP");

@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/login.css">
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <br>
+      <br />
 
-        <div id="font">
-            <div id="font1">
-                <img id="imgf1" src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo-2005-2015.png" alt="">
-            </div>
-            <div id="font2">
-                <img id="imgf2" src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button.png" alt="">
-            </div>
+      <div id="font">
+        <div id="font1">
+          <img
+            id="imgf1"
+            src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo-2005-2015.png"
+            alt=""
+          />
         </div>
-        <hr>
-        <p style="color: lightgrey;padding: 10px;margin-bottom: -10px;">OR</p>
-        <hr>
-        <div class="inputTags">
-            <!-- <form id="login_form"> -->
-            <input type="text" id="mobile" placeholder="Mobile Number/mobile ID" />
-
-            <p id="validmobile"></p>
-
-            <br />
-            <!-- <button id="btn">Send OTP</button> -->
-            <!-- <input type="submit" placeholder="login" id="btn"> -->
-            <button onclick="loginsucess()" id="btnlogin">Send OTP</button>
-            <br>
-            <br>
-            <hr style="color: lightgrey;">
-            <p style="color: lightgrey;font-size: 14px;">Don't have an account? <a href="register.html" style="color: #e85826;">Sign Up</a></p>
-            <!-- </form> -->
+        <div id="font2">
+          <img
+            id="imgf2"
+            src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button.png"
+            alt=""
+          />
         </div>
+      </div>
+      <hr />
+      <p style="color: lightgrey; padding: 10px; margin-bottom: -10px">OR</p>
+      <hr />
+      <div class="inputTags">
+        <!-- <form id="login_form"> -->
+        <input
+          type="text"
+          id="mobile"
+          placeholder="Mobile Number / Mobile ID"
+        />
+
+        <p id="validmobile"></p>
+
+        <br />
+        <!-- <button id="btn">Send OTP</button> -->
+        <!-- <input type="submit" placeholder="login" id="btn"> -->
+        <button onclick="loginsucess()" id="btnlogin">Send OTP</button>
+        <br />
+        <br />
+        <hr style="color: lightgrey" />
+        <p style="color: lightgrey; font-size: 14px">
+          Don't have an account?
+          <a href="register.html" style="color: #e85826">Sign Up</a>
+        </p>
+        <!-- </form> -->
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
 
 <script src="./scripts/login.js"></script>

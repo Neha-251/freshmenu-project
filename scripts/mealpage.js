@@ -1,5 +1,7 @@
 
-
+import footer from "../components/footer.js";
+var foot = document.getElementById("footer");
+foot.innerHTML = footer();
 
 async function details() {
 
@@ -146,7 +148,7 @@ let appendRandom = ((data) => {
 
     var i = 1;
     data.forEach((elem) => {
-        if (i > 4){
+        if (i > 4) {
 
         } else {
             var ran_meal = document.getElementById('ran_meal');
@@ -157,7 +159,7 @@ let appendRandom = ((data) => {
             let { strMealThumb } = elem;
 
             let ran_main = document.createElement('div');
-            ran_main.setAttribute("id", "ran_main");            
+            ran_main.setAttribute("id", "ran_main");
 
 
             let ran_div1 = document.createElement('div');
@@ -217,6 +219,3 @@ let appendRandom = ((data) => {
 
 
 
-import footer from "../components/footer.js";
-var foot = document.getElementById("footer");
-foot.innerHTML = footer();
