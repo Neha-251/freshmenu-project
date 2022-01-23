@@ -2,7 +2,7 @@
 
 Freshmenu is the online go-to neighbourhood food delivery option you can turn to when you’re famished. Our chefs create a variety of plated meals on demand, to make sure that you are spoilt for choice. Since our menus change every day, we stand out from the throng of eateries that offer you a fixed menu.
 
-At FreshMenu, all meals are crafted with the finest ingredients including farm fresh vegetables and meats. So, you can expect to go on a gastronomical adventure with every meal that you order from us. All the ingredients that we use undergo a quality check process that ensures a top-notch meal for you. Our food is the freshest as we source halal certified meats, farm fresh fruits and vegetables, directly from the local supplier. All our meals are free from preservatives or additives such as MSG. It's advice to consume the food within 1 hour from the time the food is delivered
+At FreshMenu, all meals are crafted with the finest ingredients including farm fresh vegetables and meats.  All the ingredients that we use undergo a quality check process that ensures a top-notch meal for you. Our food is the freshest as we source halal certified meats, farm fresh fruits and vegetables, directly from the local supplier. All our meals are free from preservatives or additives such as MSG. It's advice to consume the food within 1 hour from the time the food is delivered.So, you can expect to go on a gastronomical adventure with every meal that you order from us.
 
 Our daily menu is exclusively designed by our chefs. We have a different menu everyday so you can browse through and pick whatever teases your tastebuds.
 
