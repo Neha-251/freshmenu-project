@@ -82,6 +82,9 @@ let appendMeal = ((data) => {
         add_div.setAttribute("id", "add_div");
 
         add_div.innerHTML = "Add";
+        add_div.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         let detailsMeal_div = document.createElement('div');
         detailsMeal_div.setAttribute("id", "detailsMeal_div");
@@ -222,3 +225,19 @@ let appendRandom = ((data) => {
 document.getElementById("homeimg").addEventListener("click", function () {
     window.location.href = "index.html"
 })
+
+var cart = JSON.parse(localStorage.getItem("CartData")) || []
+function sideCart({ strMeal, strMealThumb }) {
+
+
+    let cartData = {
+        strMeal,
+        strMealThumb,
+        price: 249
+    }
+    cart.push(cartData)
+    localStorage.setItem("CartData", JSON.stringify(cart));
+
+    console.log(cartData)
+
+}

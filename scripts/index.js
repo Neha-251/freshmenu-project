@@ -967,6 +967,7 @@ function appendCart(cart) {
 
     document.querySelector(".sideCart").innerHTML = "";
     document.querySelector("#cartLength").innerHTML = `${cart.length} items`;
+    document.querySelector("#cartlength").innerHTML = cart.length;
 
     cart.map(function (elem, index) {
         let div = document.createElement("div");

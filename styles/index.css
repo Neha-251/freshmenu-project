@@ -151,8 +151,20 @@
   align-items: center;
   cursor: pointer;
   font-size: 22px;
+  position: relative;
 }
 
+#cartlength {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  text-align: center;
+  width: 20px;
+  border-radius: 50px;
+  margin-left: 4px;
+  margin-top: 6px;
+  background-color: gold;
+}
 /* lower header part */
 
 /* sliding photo */
