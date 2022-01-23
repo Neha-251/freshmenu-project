@@ -1150,3 +1150,6 @@ cartdiv.addEventListener("click", function () {
 document.getElementById("homeimg").addEventListener("click", function () {
     window.location.href = "index.html"
 })
+document.getElementById("offers_div").addEventListener("click", function () {
+    window.location.href = "offer.html"
+})
