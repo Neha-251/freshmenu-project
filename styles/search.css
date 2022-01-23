@@ -172,9 +172,17 @@ body {
 
 .sideCartMain {
   grid-area: s;
+  width: 25%;
   background-color: white;
   display: none;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgb(100 100 111 / 20%) 0px -40px 29px 0px;
+  height: 102%;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+}
+.sideCartMain::-webkit-scrollbar {
+  width: 0;
 }
 
 .sideCartMain h2 {
@@ -321,4 +329,13 @@ body {
   padding: 12px;
   font-size: 22px;
   cursor: pointer;
+}
+
+.sidefirst {
+  background-color: white;
+}
+
+#continental {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

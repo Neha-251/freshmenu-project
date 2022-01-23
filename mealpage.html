@@ -2,103 +2,64 @@
 <html lang="en">
   <head>
     <title>Document</title>
-    <link rel="stylesheet" href="mealpage.css" />
-  </head>
-  <body>
-    <div id="navbar"></div>
-    <div id="container">
-      <div id="container1">
-        <div id="meal_image"></div>
-        <div id="meal_details"></div>
-      </div>
+    <link rel="stylesheet" href="./styles/mealpage.css" />
+    <!-- <link rel="stylesheet" href=".styles/header.css" /> -->
 
-      <div id="container2">
-        <h1>YOU MIGHT ALSO LIKE</h1>
-        <div id="recomm">
-          <div id="box1">
-            <div class="imag" id="b1"></div>
-            <div class="im_det">
-              <div class="mealname" id="m1"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-          <div id="box2">
-            <div class="imag" id="b2"></div>
-            <div class="im_det">
-              <div class="mealname"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-          <div id="box3">
-            <div class="imag" id="b3"></div>
-            <div class="im_det">
-              <div class="mealname"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
-          <div id="box4">
-            <div class="imag" id="b4"></div>
-            <div class="im_det">
-              <div class="mealname"></div>
-              <div class="mprice"></div>
-            </div>
-          </div>
+    <!-- <link rel="stylesheet" href="./styles/footer.css" /> -->
+
+  </head>
+
+  <body>
+    <!-- header part -->
+    <div id="header">
+      <div class="img">
+        <img src="https://www.freshmenu.com/images/fm-header-logo.svg" alt="" />
+        <h4>
+          Deliver to:
+          <span>Indore, Madhya...<i class="fas fa-chevron-down"></i></span>
+        </h4>
+      </div>
+      <div class="rightHead">
+        <div class="try">
+          <p>Try FreshClub</p>
         </div>
       </div>
-      <div id="container3"></div>
+      <div id="help_div">
+        <i class="far fa-life-ring"></i>
+      </div>
+      <div id="signup_div">
+        <i class="fas fa-user-lock"></i>
+        <div class="signmenu">
+          <a href="signup.html" id="login">Login In</a>
+          <a href="signin.html">Sign Up</a>
+        </div>
+      </div>
+      <div id="cart_div">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
     </div>
+
+    <!-- header part -->
+   
+    
+    
+
+    <!-- body part -->
+    <div id="container1">
+      <div id="meal_image"></div>
+      <div id="meal_details"></div>
+    </div>
+
+    <div id="container2">
+      <h1>YOU MIGHT ALSO LIKE</h1>
+     <div id="ran_meal"></div>
+      </div>
+    </div>
+
+    <!-- body part -->
+
   </body>
 </html>
+<script type="module" src="./scripts/mealpage.js"></script>        
 
-<script>
-  let title = document.createElement("p");
-  let cont2 = document.getElementById("container2");
-  let recommended = document.getElementById("recomm");
-
-  // async function recom_meal() {
-  //   let area = {
-  //     0: "American",
-  //     1: "Italian",
-  //     2: "British",
-  //     3: "Indian",
-  //   };
-
-  //   let url;
-  //   let array = [];
-  //   let dat;
-  //   let recom;
-  //   var extract1;
-  //   for (var x in area) {
-  //     url = `https://www.themealdb.com/api/json/v1/1/random.php?a=${area[x]}`;
-  //     recom = await fetch(url);
-  //     dat = await recom.json();
-  //     var val = dat.meals[0];
-  //     appendrecommeals(val);
-  //     console.log("arr:", val);
-
-  //     //   extract1 = array.push(val);
-  //   }
-  //   // console.log("array:", array);
-
-  //   // console.log(array.length);
-
-  //   // console.log("arr:", val.meals);
-  // }
-  // recom_meal();
-  // var box1 = document.getElementById("box1");
-  // var image1 = document.getElementById("m1");
-  // function appendrecommeals(arr) {
-  //   // for (var i = 0; i < 4; i++) {
-  //   // var val1 = arr[0].strMealThumb;
-  //   // console.log("val1 :", val1);
-  //   image1.innerText = arr.strArea;
-
-  //   box1.append(image1);
-  //   // }
-  // }
-
-  // recommended.append(box1);
-  // cont2.append(recommended);
-  // appendrecommeals();
-  // //   cont2.append(recommended);
-</script>
+ 

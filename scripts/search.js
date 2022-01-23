@@ -2,8 +2,12 @@ import header from "../components/header.js"
 var head = document.getElementById("header");
 head.innerHTML = header();
 
+import footer from "../components/footer.js"
+var foot = document.getElementById("footer");
+foot.innerHTML = footer();
+
 var searchBox;
-document.getElementById("clearBtn").addEventListener("click",clearData);
+document.getElementById("clearBtn").addEventListener("click", clearData);
 function clearData() {
     searchBox = document.getElementById("searchBox").value;
 
@@ -97,15 +101,16 @@ function deBounce() {
         food_waiting = setTimeout(function () {
             foodSearch();
             alsolike();
-
         }, 2000);
 
 
         document.querySelector(".searchFoodResults").style.display = "block";
         document.querySelector(".topCata").style.display = "none";
+        document.querySelector("#continental").style.display = "none";
     } else {
         document.querySelector(".searchFoodResults").style.display = "none";
         document.querySelector(".topCata").style.display = "block";
+
     }
 
 
@@ -119,7 +124,10 @@ function sideCart({ strMeal, strMealThumb, price }) {
     `;
     document.querySelector(".sideCartMain").style.display = "block";
     document.querySelector(".container").style.width = "100%";
-    document.querySelector(".secondpart").style.width = "90%";
+    document.querySelector(".secondpart").style.width = "94%";
+    document.querySelector("#dodiv1").style.marginLeft = "4%";
+    document.querySelector("#dodiv2").style.marginLeft = "52px";
+    document.querySelector("#inp").style.width = "380px";
 
     let cartData = {
         strMeal,
@@ -140,6 +148,7 @@ function appendCart(cart) {
     let sideCartData = document.querySelector(".sideCart");
 
     document.querySelector(".sideCart").innerHTML = "";
+
     document.querySelector("#cartLength").innerHTML = `${cart.length} items`;
 
     cart.map(function (elem, index) {
@@ -227,7 +236,7 @@ async function alsolike() {
         searchBox = document.querySelector("#searchBox").value;
 
         let res = await fetch(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=American`
         );
         let data = await res.json();
         let meal = data.meals;
@@ -281,3 +290,70 @@ document.getElementById("close").addEventListener("click", function () {
     grid-template-areas: "c c c c c c c c c c c c ";
     `;
 })
+
+document.querySelector(".foodDiv").addEventListener("click", continental);
+
+
+async function continental() {
+    alsolike();
+    document.querySelector(".topCata").style.display = "none";
+    document.querySelector(".searchFoodResults").style.display = "block";
+    try {
+
+
+        let res = await fetch(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`
+
+        );
+        let Contdata = await res.json();
+        let meals = Contdata.meals;
+
+        appendConti(meals);
+
+        console.log("cont", meals);
+    } catch (err) {
+        console.log("er:", err);
+    }
+
+
+
+}
+
+function appendConti(meals) {
+
+    let searchResult2 = document.querySelector("#continental");
+    searchBox = document.getElementById("searchBox").value = "continental";
+
+    searchResult2.innerHTML = ""
+    if (meals == undefined) {
+        return false;
+    }
+
+    meals.forEach(({ strMeal, strMealThumb }) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "productDiv")
+
+        let img = document.createElement("img");
+        img.src = strMealThumb;
+        let p = document.createElement("p");
+        p.setAttribute("id", "searchHistory");
+        p.innerText = strMeal;
+
+        let div2 = document.createElement("div");
+
+        let price = document.createElement("p");
+        price.innerHTML = "₹ 249";
+        let btn = document.createElement("button");
+        btn.setAttribute("id", "cartBtn");
+        btn.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb, price }))
+        });
+        btn.innerHTML = "ADD <sup>+</sup>"
+
+
+        div2.append(price, btn)
+        div.append(img, p, div2);
+        searchResult2.append(div);
+    });
+}
+

@@ -2,6 +2,35 @@ import header from "../components/header.js"
 var head = document.getElementById("header");
 head.innerHTML = header();
 
+import footer from "../components/footer.js"
+var foot = document.getElementById("footer");
+foot.innerHTML = footer();
+
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var slide = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    for (i = 0; i < slide.length; i++) {
+        slide[i].className = slide[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    slide[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 3 seconds
+}
+
+
 
 async function categoryData() {
 
@@ -90,8 +119,6 @@ const appendBuyone = (data_1) => {
 
     let { meals } = data_1;
 
-
-
     meals.forEach((elem) => {
 
         let { strMeal } = elem;
@@ -119,7 +146,7 @@ const appendBuyone = (data_1) => {
         img.src = strMealThumb;
         sub_div1.innerHTML = strMeal;
 
-        sub_div2_div1.innerHTML = "₹" + " " + 150;
+        sub_div2_div1.innerHTML = "₹" + " " + 249;
 
         sub_div2_div2.innerHTML = "Add";
         sub_div2_div2.addEventListener("click", function () {
@@ -132,8 +159,18 @@ const appendBuyone = (data_1) => {
 
         buyOne.append(main_div);
 
-    });
+        img.addEventListener("click", () => {
 
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
+
+    });
 
 }
 
@@ -175,6 +212,9 @@ const appendRice = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 60;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
@@ -182,6 +222,16 @@ const appendRice = (data_1) => {
 
         rice.append(main_div);
 
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
     });
 }
 
@@ -223,12 +273,26 @@ const appendNoodle = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         noodle.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -272,12 +336,25 @@ const appendPasta = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         pasta.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 }
@@ -320,12 +397,25 @@ const appendBiriyani = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
-
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         biriyani.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+            //strMealId = JSON.stringify(strMealId);
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -370,12 +460,25 @@ const appendFit = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         fit.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -420,12 +523,25 @@ const appendKeto = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         keto.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -470,12 +586,25 @@ const appendBurger = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         burger.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -520,12 +649,25 @@ const appendBreakfast = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         breakfast.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -569,12 +711,25 @@ const appendSnacks = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         snacks.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -618,12 +773,25 @@ const appendSandwitches = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
 
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         sandwitches.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -667,12 +835,24 @@ const appendSides = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
-
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         sides.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -716,12 +896,24 @@ const appendDesserts = (data_1) => {
         sub_div2_div1.innerHTML = "₹" + " " + i;
         i = i + 50;
         sub_div2_div2.innerHTML = "Add";
-
+        sub_div2_div2.addEventListener("click", function () {
+            sideCart(({ strMeal, strMealThumb }))
+        });
         main_div.append(img, sub_div1, sub_div2);
 
         sub_div2.append(sub_div2_div1, sub_div2_div2);
 
         desserts.append(main_div);
+
+        img.addEventListener("click", () => {
+
+            let { idMeal } = elem;
+
+            localStorage.setItem("mealId", idMeal);
+
+            window.location.href = "mealpage.html";
+
+        });
 
     });
 
@@ -741,6 +933,19 @@ function sideCart({ strMeal, strMealThumb }) {
     document.querySelector(".container").style.width = "100%";
     document.querySelector(".secondpart").style.width = "110%";
     document.querySelector(".secondpart").style.marginLeft = "-6%";
+    document.querySelector("#category_list").style.marginLeft = "50px";
+    document.querySelector("#category_image").style.marginLeft = "0%";
+    document.querySelector("#category_image").style.width = "80%";
+    document.querySelector("#dodiv1").style.marginLeft = "4%";
+    document.querySelector("#dodiv2").style.marginLeft = "52px";
+    document.querySelector("#inp").style.width = "380px";
+
+    var carimg = document.querySelectorAll(".carimg")
+    for (let i = 0; i < carimg.length; i++) {
+        carimg[i].style.width = "30%";
+        carimg[i].style.height = "35%";
+    }
+
 
     let cartData = {
         strMeal,
@@ -847,7 +1052,7 @@ async function alsolike() {
 
 
         let res = await fetch(
-            `https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`
+            `https://www.themealdb.com/api/json/v1/1/filter.php?a=American`
         );
         let data = await res.json();
         let meal = data.meals;
@@ -906,3 +1111,9 @@ document.getElementById("close").addEventListener("click", function () {
 document.getElementById("search_div").addEventListener("click", function () {
     window.location.href = "search.html"
 })
+document.getElementById("help_div").addEventListener("click", function () {
+    window.location.href = "help.html"
+})
+
+
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="cartmain">
+      <div class="container">
+        <div id="header"></div>
+        <div id="header_maindiv">
+          <nav id="lower_nav">
+            <div id="search_div">
+              <i class="fas fa-search"></i>
+              <p>Search</p>
+            </div>
+            <div id="offers_div">
+              <p>Offers</p>
+            </div>
+            <div id="help_div">
+              <i class="far fa-life-ring"></i>
+            </div>
+            <div id="signup_div">
+              <i class="fas fa-user-lock"></i>
+              <div class="signmenu">
+                <a href="signup.html" id="login">Login In</a>
+                <a href="signin.html">Sign Up</a>
+              </div>
+            </div>
+            <div id="cart_div">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </nav>
+        </div>
+
+        <!-- slideshow -->
+        <div id="carousel">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">1 / 6</div> -->
+
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/3d05d982-e3e0-4051-968f-aed93e9a6a4a.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/0dbf9d10-975d-4a2e-9521-6768ef740802.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/b0776d06-35ec-40e8-884f-67e0b82155f6.jpg"
+                class="carimg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">2 / 6</div> -->
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/0dbf9d10-975d-4a2e-9521-6768ef740802.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/b0776d06-35ec-40e8-884f-67e0b82155f6.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/d348c777-35f9-43a2-b54d-f6667aa6d757.jpg"
+                class="carimg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">3 / 6</div> -->
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/b0776d06-35ec-40e8-884f-67e0b82155f6.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/d348c777-35f9-43a2-b54d-f6667aa6d757.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/63293e49-f2c1-4692-8f19-1249eca4e27f.jpg"
+                class="carimg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">4/6</div> -->
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/d348c777-35f9-43a2-b54d-f6667aa6d757.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/63293e49-f2c1-4692-8f19-1249eca4e27f.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/0f7e2975-72c3-4684-9d12-e78fd9da6916.jpg"
+                class="carimg"
+              />
+            </div>
+
+            <div class="mySlides fade">
+              <!-- <div class="numbertext"></div> -->
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/63293e49-f2c1-4692-8f19-1249eca4e27f.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/0f7e2975-72c3-4684-9d12-e78fd9da6916.jpg"
+                class="carimg"
+              />
+              <img
+                src="https://s3-ap-southeast-1.amazonaws.com/foodvista.1/456e646b-281d-4c53-9c6b-c388976ed455.jpg"
+                alt=""
+                class="carimg"
+              />
+            </div>
+            <br />
+
+            <div style="text-align: center">
+              <span class="slide"></span>
+              <span class="slide"></span>
+              <span class="slide"></span>
+              <span class="slide"></span>
+              <span class="slide"></span>
+              <span class="slide"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="secondpart">
+          <!-- category part -->
+          <nav id="category_nav">
+            <p id="category_heading">CATEGORIES</p>
+            <div id="veg_div">VEG</div>
+            <div id="price_div">PRICE</div>
+            <div id="filter_div">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtSHhSYtkbMRlVDGZi1KMj5BvbXei38vJFA&usqp=CAU"
+                alt=""
+              />
+              <p>FILTERS</p>
+            </div>
+          </nav>
+
+          <hr id="hr_category" />
+
+          <div id="category_maindiv">
+            <div id="category_list">
+              <div>
+                <a href="#buyOne"> Buy One Get One</a>
+              </div>
+              <div>
+                <a href="#rice"> Rice Bowls</a>
+              </div>
+              <div>
+                <a href="#noodle"> Noodle Bowls</a>
+              </div>
+              <div>
+                <a href="#pasta"> Pastas & Steaks</a>
+              </div>
+              <div>
+                <a href="#biriyani"> Biriyanis & Thalis</a>
+              </div>
+              <div>
+                <a href="#fit"> Fit N Fab</a>
+              </div>
+              <div>
+                <a href="#keto"> Keto Specials</a>
+              </div>
+              <div>
+                <a href="#burger"> Burger & Wraps</a>
+              </div>
+              <div>
+                <a href="#breakfast"> All day Breakfast</a>
+              </div>
+              <div>
+                <a href="#accompaniments"> Accompaniments</a>
+              </div>
+              <div>
+                <a href="#sandwitches"> Sandwitches</a>
+              </div>
+              <div>
+                <a href="#sides"> Sides & Beverages</a>
+              </div>
+              <div>
+                <a href="#desserts"> Fresh Deserts</a>
+              </div>
+              <!-- <div>Daily Lunch Specials</div> -->
+            </div>
+            <div id="category_image">
+              <div id="buyOne"></div>
+              <div id="rice"></div>
+              <div id="noodle"></div>
+              <div id="pasta"></div>
+              <div id="biriyani"></div>
+              <div id="fit"></div>
+              <div id="keto"></div>
+              <div id="burger"></div>
+              <div id="breakfast"></div>
+              <div id="accompaniments"></div>
+              <div id="sandwitches"></div>
+              <div id="sides"></div>
+              <div id="desserts"></div>
+            </div>
+          </div>
+        </div>
+        <div id="footer"></div>
+      </div>
+
+      <!-- container end -->
+
+      <div class="sideCartMain">
+        <h2>Your Cart</h2>
+        <i class="fas fa-times" id="close"></i>
+        <p id="cartLength"></p>
+        <div class="sideCart"></div>
+        <div class="check">
+          <button id="placeOrder">
+            Place Order - <span class="total"></span>
+          </button>
+        </div>
+        <div class="delivery">
+          <p>Safety Assured meals and contactless delivery</p>
+        </div>
+
+        <div class="alsolikeMain">
+          <div class="heading">
+            <h4>You May Also Like</h4>
+          </div>
+          <div class="alsolike"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header part -->
+
+    <!-- footer part -->
+
+    <!-- footer part -->
+  </body>
+</html>
+
+<script type="module" src="./scripts/index.js"></script>
