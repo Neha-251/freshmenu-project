@@ -115,20 +115,22 @@ h1:after {
 }
 
 #add_div{
-  height: 29px;
-  width: 76px;
+  height: 30px;
+  width: 70px;
   padding: 5px 25px;
   border-radius: 20px;
   background-color: rgb(234,95,43);
   color: white;
   margin-top: 10px;
   font-weight: 600;
+  font-size: 20px;
+  text-align: center;
 }
 
 #detailsMeal_div{
   height:auto;
   width:500px;
-  padding: 10px;
+  padding: 0px;
   margin-top: 30px;
 }
 
@@ -196,50 +198,50 @@ h1:after {
 }
 
 #ran_main{
-  height: 250px;
-  width: 200px;
+  height: 330px;
+  width: 300px;
+  padding:5px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 #ran_div1{
-  height:260px;
-  width:200px;
-  margin-top:10px;
+  height:280px;
+  width:220px;
+  margin-top:0px;
 }
 #ran_div2{
   height:25px;
-  width:200px;
+  width:220px;
   display: flex;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #ran_img{
   height:200px;
-  width:200px;
+  width:220px;
 
 }
 #ran_p1{
-  height:30px;
   width:200px;
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 5px;
   font-weight: 600;
   color: rgb(80, 80, 80);
 }
 #ran_p2{
-  height:30px;
   width:200px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  margin-top: 5px;
+  margin-top: 0px;
 
   color:rgb(129, 128, 128);
 }
 
 #ran_div2_div1{
   height:20px;
-  width:50px;
-  font-size: 15px;
+  width:120px;
+  font-size: 18px;
   font-weight: 500;
-  margin-top: 5px;
+  margin-top: 10px;
 
   color:rgb(107, 106, 106);
 }
@@ -251,5 +253,5 @@ h1:after {
   background-color: rgb(234,95,43);
   color: white;
   font-weight: 600;
-  margin-left:70px;
+  margin-left:90px;
 }
