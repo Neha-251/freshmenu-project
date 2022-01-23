@@ -1,3 +1,125 @@
+
+ body {
+  margin: 0px;
+}
+/* header part css */
+#header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border: 2px solid black;
+  background-color: white;
+  /* margin: 0px; */
+  padding-top: 0px;
+  border-bottom: 1px solid lightgray;
+}
+.img {
+  display: flex;
+  width: 33%;
+  margin-left: 7%;
+  align-items: center;
+}
+.img img {
+  width: 42%;
+}
+.img h4 {
+  padding-left: 23px;
+  color: grey;
+}
+.img span {
+  color: #df561d;
+}
+.rightHead {
+  display: flex;
+  align-items: center;
+  height: 58px;
+  margin-left: 250px;
+  width: 300px;
+}
+
+
+.try {
+  background-color: #603b6d;
+  height: 58px;
+  cursor: pointer;
+}
+.try p {
+  padding: 0 14px;
+  padding-top: 5px;
+  background-color: #603b6d;
+  font-weight: bold;
+  color: white;
+}
+
+#help_div {
+  height: 33px;
+  width: 54px;
+  margin-left: 1%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border-radius: 50px;
+  transition: 0.5s ease;
+}
+#help_div:hover {
+  background-color: #f2f3f3;
+}
+
+#signup_div {
+  height: 35px;
+  width: 54px;
+  margin-left: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s ease;
+  position: relative;
+}
+#signup_div:hover {
+  background-color: #f2f3f3;
+}
+.signmenu {
+  display: none;
+}
+.signmenu a {
+  font-size: 16px;
+  background: white;
+  text-decoration: none;
+  color: black;
+}
+#signup_div:hover .signmenu {
+  display: block;
+  width: 164%;
+  text-align: center;
+  position: absolute;
+  padding: 6px;
+  margin-top: 114px;
+  margin-left: 4px;
+  background-color: white;
+  color: white;
+  border-radius: 4px 0 4px 4px;
+  z-index: 1;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#cart_div {
+  background-color: #f2f3f3;
+  height: 109%;
+  width: 60px;
+  margin-left: 2%;
+  display: flex;
+  margin-bottom: -4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+
 #container1 {
   height: 600px;
   width: 90%;
