@@ -8,5 +8,5 @@ Our daily menu is exclusively designed by our chefs. We have a different menu ev
 
 Every order is delivered in the shortest possible time frame, right to your doorstep.We take a minimum of 30-45 minutes from the time of your order, to ensure that your food is delivered without any quality issues. You are free to place an order for lunch or dinner delivery at any time of the day with a specified delivery time. Our ‘All-day’ menu can serve your hunger pangs throughout the day. So you can order Salads, Soups, Sandwiches and that sweet something, or three course meal anytime between 9:00 am and 11:00 pm.
 
-Now you can save time and enjoy a dining experience in the comfort of your space.
+
 
