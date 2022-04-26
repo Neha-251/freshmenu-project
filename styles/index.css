@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand&family=Roboto+Condensed:wght@300;400&display=swap");
+
+* {
+  font-family: "Quicksand", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body{
+  overflow: scroll;
+  overflow-y: visible;
+  overflow-x: hidden;
+} */
+/* body::-webkit-scrollbar {
+  width: 0px; remove scrollbar space / */
+/* background: transparent; / optional: just make scrollbar invisible */
+/* }    */
+/* optional: show position indicator in red */
+/* ::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}   */
+
+#header_maindiv {
+  background-color: white;
+  position: relative;
+  margin-bottom: 30px;
+  height: 70px;
+  width: 99.8%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* upper header part */
+
+/* upper header part */
+
+/* lower header part */
+
+#lower_nav {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#search_div {
+  height: 40px;
+  width: 120px;
+  border-radius: 20px;
+  justify-self: center;
+  display: flex;
+  margin-left: 60%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+#search_div:hover {
+  background-color: whitesmoke;
+}
+#search_div i {
+  font-size: 22px;
+}
+#search_div p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px;
+  color: rgb(82, 81, 81);
+}
+
+#offers_div {
+  height: 32px;
+  width: 80px;
+  margin-left: 1%;
+  padding-top: 6px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 2px;
+  border-radius: 18px;
+  cursor: pointer;
+  color: rgb(82, 81, 81);
+  font-weight: 600;
+}
+#offers_div:hover {
+  background-color: #f2f3f3;
+}
+#help_div {
+  height: 33px;
+  width: 54px;
+  margin-left: 1%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border-radius: 50px;
+  transition: 0.5s ease;
+}
+#help_div:hover {
+  background-color: #f2f3f3;
+}
+
+#signup_div {
+  height: 35px;
+  width: 54px;
+  margin-left: 1.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.5s ease;
+  position: relative;
+}
+#signup_div:hover {
+  background-color: #f2f3f3;
+}
+.signmenu {
+  display: none;
+}
+.signmenu a {
+  font-size: 16px;
+  background: white;
+  text-decoration: none;
+  color: black;
+}
+#signup_div:hover .signmenu {
+  display: block;
+  width: 164%;
+  text-align: center;
+  position: absolute;
+  padding: 6px;
+  margin-top: 100px;
+  margin-left: 4px;
+  background-color: white;
+  color: white;
+  border-radius: 4px 0 4px 4px;
+  z-index: 1;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#cart_div {
+  background-color: #f2f3f3;
+  height: 109%;
+  width: 60px;
+  margin-left: 2%;
+  display: flex;
+  margin-bottom: -4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 22px;
+  position: relative;
+}
+
+#cartlength {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  text-align: center;
+  width: 20px;
+  border-radius: 50px;
+  margin-left: 4px;
+  margin-top: 6px;
+  background-color: gold;
+}
+/* lower header part */
+
+/* sliding photo */
+
+#carousel {
+  box-sizing: border-box;
+  width: 90%;
+  padding: 30px 0;
+  margin-left: 3%;
+  margin-top: 20px;
+  border: 2px solid transparent;
+}
+
+.mySlides {
+  display: flex;
+}
+
+img {
+  vertical-align: middle;
+  border-radius: 12px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 108%;
+  border-radius: 12px;
+  position: relative;
+  /* margin-left: 40px; */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* sliding photo */
+
+#category_nav {
+  display: flex;
+  height: 50px;
+  width: 85%;
+  margin-top: 0px;
+  margin-left: 7%;
+}
+#hr_category {
+  width: 85%;
+  margin: 0px auto;
+}
+#category_heading {
+  margin-left: 3%;
+  font-size: 20px;
+}
+#veg_div {
+  margin-left: 60%;
+  font-size: 15px;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid dimgray;
+  border-radius: 5px;
+}
+#price_div {
+  margin-left: 2%;
+  font-size: 15px;
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid dimgray;
+  border-radius: 5px;
+}
+#filter_div {
+  margin-left: 2%;
+  font-size: 15px;
+  height: 30px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  border: 1px solid dimgray;
+  display: flex;
+  border-radius: 5px;
+}
+#filter_div img {
+  height: 20px;
+  width: auto;
+}
+
+#category_maindiv {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+#category_list div {
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: dimgray;
+}
+#category_list {
+  width: 15%;
+  margin-left: 35px;
+  margin-top: 20px;
+  height: auto;
+  padding: 0;
+  z-index: 1;
+}
+
+#category_list div {
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+}
+#category_list div a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: dimgray;
+}
+
+#category_list div :hover {
+  font-size: 18px;
+  text-decoration-line: underline;
+  text-decoration-color: chocolate;
+}
+
+#category_image {
+  width: 100%;
+  height: 700px;
+  margin-left: 3%;
+  overflow: scroll;
+  padding-left: 24px;
+  transition: all ease 1s;
+  transition-duration: 1s;
+  scrollbar-track-color: transparent;
+  scrollbar-width: 0px;
+  scrollbar-arrow-color: transparent;
+  scroll-snap-type: unset;
+  scrollbar-highlight-color: transparent;
+  scrollbar-shadow-color: transparent;
+}
+#category_image::-webkit-scrollbar {
+  width: 0;
+}
+
+#buyOne,
+#rice,
+#noodle,
+#pasta,
+#biriyani,
+#fit,
+#keto,
+#burger,
+#breakfast,
+#accompaniments,
+#sandwitches,
+#sides,
+#desserts {
+  height: auto;
+  padding: 50px 0;
+  width: auto;
+  position: relative;
+  /* overflow-y: scroll; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 60px;
+  column-gap: 20px;
+}
+
+#maindiv {
+  height: 292px;
+  width: 300px;
+  /* border-radius: 20px; */
+  /* box-shadow: rgb(50 50 105 / 15%) 0px 2px 5px 0px, rgb(0 0 0 / 5%) 0px 2px 5px 0px; */
+  cursor: pointer;
+  /* box-shadow: rgb(165 165 168 / 10%) 0px 8px 24px, rgb(17 17 26 / 10%) 0px 16px 56px, rgb(17 17 26 / 10%) 0px 24px 80px; */
+  border-bottom: 1px solid lightgray;
+  margin-bottom: -16px;
+}
+
+#main_div_img {
+  height: 200px;
+  width: 100%;
+  transition: 0.5s ease;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+#main_div_img:hover {
+  transform: scale(1.1);
+}
+#sub_div1 {
+  width: 100%;
+  height: 40px;
+  color: rgb(110, 109, 109);
+  margin-top: 10px;
+  font-weight: 600;
+  padding-left: 6px;
+}
+#sub_div2 {
+  height: auto;
+  width: 100%;
+  padding-left: 6px;
+  display: flex;
+}
+#sub_div2_div2 {
+  height: 29px;
+  width: 76px;
+  padding: 5px 25px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #f5914e, #e85826);
+  color: white;
+  font-weight: 600;
+}
+#sub_div2_div1 {
+  height: 40px;
+  width: 200px;
+
+  color: rgb(77, 77, 77);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.cartmain {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas: "c c c c c c c c c c c c";
+}
+
+.container {
+  grid-area: c;
+}
+
+.sideCartMain {
+  grid-area: s;
+  width: 25%;
+  background-color: white;
+  display: none;
+  box-shadow: rgb(100 100 111 / 20%) 0px -40px 29px 0px;
+  height: 102%;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+}
+.sideCartMain::-webkit-scrollbar {
+  width: 0;
+}
+
+.sideCartMain h2 {
+  padding: 6px 10px 0 10px;
+  font-size: 18px;
+}
+
+.sideCartMain p {
+  padding: 6px 10px 0 10px;
+  font-size: 18px;
+}
+
+.sideCartDiv {
+  width: 90%;
+  margin: 26px 20px;
+}
+
+.sideCartDiv div {
+  display: flex;
+  justify-content: space-between;
+}
+.sideCartDiv div span {
+  border: 1px solid lightgrey;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  align-items: center;
+  border-radius: 50px;
+}
+.sideCartDiv div button {
+  background-color: white;
+  padding: 0px 14px 0 14px;
+  margin-top: 0px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+#count {
+  color: black;
+  font-size: 19px;
+}
+#inc,
+#dec {
+  color: #df561d;
+}
+
+.sideCartDiv div p {
+  padding: 6px 10px 0 10px;
+  font-size: 18px;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check button {
+  padding: 14px 74px;
+  margin: 4px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  background-image: linear-gradient(to right, #f5914e, #e85826);
+  color: #fff;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delivery p {
+  font-size: 16px;
+  color: #2ebd59;
+  border: 1px solid #2ebd59;
+  background-color: #e2feed;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px;
+}
+/* ---ALSOLIKE-- */
+.likeDiv {
+  width: 90%;
+  display: flex;
+  padding-bottom: 16px;
+  margin: 16px 20px;
+  border-bottom: 1px solid lightgrey;
+}
+.likeDiv img {
+  width: 98px;
+  height: 74px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.likeDiv img:hover {
+  transform: scale(1.1);
+}
+
+.likeDiv p {
+  padding: 4px 12px;
+  color: #4a4a4a;
+}
+
+.likeDiv div p {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+}
+.likeDiv button {
+  padding: 8px 18px;
+  margin: 16px 8px;
+  font-weight: bold;
+  height: 34px;
+  font-size: 13px;
+  background-image: linear-gradient(to right, #f5914e, #e85826);
+  color: #fff;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+}
+
+.heading h4 {
+  padding: 20px;
+  margin-top: -34px;
+  margin-bottom: -16px;
+}
+.alsolikeMain {
+  background-color: whitesmoke;
+  margin-top: 14%;
+}
+
+.sideCartMain i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.secondpart {
+  width: 100%;
+  margin: auto;
+}
+
+.carimg {
+  width: 400px;
+  height: 280px;
+  margin-left: 20px;
+}

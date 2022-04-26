@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  margin-bottom: -64px;
+}
+.main {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  background-color: #31333c;
+  align-items: center;
+  margin-top: 10px;
+}
+.main h2 {
+  margin-left: 18%;
+  /* display: flex; */
+  /* align-items: center; */
+  color: white;
+  font-size: 40px;
+}
+.payment {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: auto;
+}
+.heading h2 {
+  padding: 16px;
+  margin-left: 60px;
+}
+.paydiv {
+  padding: 24px 8px;
+  background-color: whitesmoke;
+  margin: 8px;
+}
+.paydiv img {
+  width: 18%;
+}
+.paydiv p {
+  color: darkslategrey;
+  padding: 10px;
+  font-size: 16px;
+}
+.paydiv span {
+  padding: 10px;
+  color: red;
+}
